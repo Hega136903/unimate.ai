@@ -1,0 +1,28 @@
+$schema: https://railway.app/railway.schema.json
+version: "2"
+
+environments:
+  production:
+    variables:
+      NODE_ENV: production
+      PORT: ${{RAILWAY_PORT || 5000}}
+
+services:
+  backend:
+    source:
+      type: github
+      repo: your-username/unimate-ai
+      branch: main
+      rootDirectory: backend
+    build:
+      command: npm run build
+    start:
+      command: npm start
+    healthcheck:
+      path: /api/health
+      timeout: 30s
+      interval: 60s
+    variables:
+      NODE_ENV: production
+    networking:
+      serviceDomain: unimate-api.railway.app

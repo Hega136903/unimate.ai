@@ -45,6 +45,7 @@ interface VoteResult {
 
 const VotingSystem: React.FC = () => {
   const { user } = useAuth();
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
   const [polls, setPolls] = useState<Poll[]>([]);
   const [selectedPoll, setSelectedPoll] = useState<Poll | null>(null);
   const [selectedOption, setSelectedOption] = useState<string>('');
@@ -69,21 +70,34 @@ const VotingSystem: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/voting/polls/active', {
+      console.log('🗳️ Fetching active polls from:', `${API_BASE_URL}/voting/polls/active`);
+      
+      const response = await fetch(`${API_BASE_URL}/voting/polls/active`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
 
+      console.log('🗳️ Polls response status:', response.status);
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `API error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('🗳️ Polls data received:', data);
+      
       if (data.success) {
         setPolls(data.data);
+        console.log('🗳️ Set polls:', data.data.length, 'polls');
       } else {
-        showNotification(data.message || 'Failed to fetch polls', 'error');
+        throw new Error(data.message || 'Failed to fetch polls');
       }
     } catch (error) {
-      showNotification('Error fetching polls', 'error');
+      console.error('🗳️ Error fetching polls:', error);
+      showNotification(`Error fetching polls: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     } finally {
       setLoading(false);
     }
@@ -95,7 +109,9 @@ const VotingSystem: React.FC = () => {
 
     setVoting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/voting/vote', {
+      console.log('🗳️ Casting vote:', { pollId, optionId });
+      
+      const response = await fetch(`${API_BASE_URL}/voting/vote`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -104,7 +120,16 @@ const VotingSystem: React.FC = () => {
         body: JSON.stringify({ pollId, optionId }),
       });
 
+      console.log('🗳️ Vote response status:', response.status);
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `Vote API error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('🗳️ Vote response data:', data);
+      
       if (data.success) {
         showNotification(`Vote cast successfully for "${data.data.selectedOption}"!`, 'success');
         // Refresh polls to update vote status
@@ -114,10 +139,11 @@ const VotingSystem: React.FC = () => {
         setSelectedPoll(null);
         setSelectedOption('');
       } else {
-        showNotification(data.message || 'Failed to cast vote', 'error');
+        throw new Error(data.message || 'Failed to cast vote');
       }
     } catch (error) {
-      showNotification('Error casting vote', 'error');
+      console.error('🗳️ Error casting vote:', error);
+      showNotification(`Error casting vote: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     } finally {
       setVoting(false);
     }
@@ -128,22 +154,37 @@ const VotingSystem: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/voting/polls/${pollId}/results`, {
+      console.log('📊 Fetching poll results for pollId:', pollId);
+      
+      const response = await fetch(`${API_BASE_URL}/voting/polls/${pollId}/results`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
 
+      console.log('📊 Results response status:', response.status);
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `Results API error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('📊 Results data received:', data);
+      
       if (data.success) {
         setShowResults(prev => ({
           ...prev,
           [pollId]: data.data
         }));
+        console.log('📊 Results set for poll:', pollId);
+      } else {
+        throw new Error(data.message || 'Failed to fetch results');
       }
     } catch (error) {
-      showNotification('Error fetching results', 'error');
+      console.error('📊 Error fetching results:', error);
+      showNotification(`Error fetching results: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     }
   };
 

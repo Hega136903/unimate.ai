@@ -32,6 +32,7 @@ interface Poll {
 
 const AdminPanel: React.FC = () => {
   const { user, isLoggedIn } = useAuth();
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
   const [activeTab, setActiveTab] = useState<'dashboard' | 'polls' | 'create' | 'analytics'>('dashboard');
   const [stats, setStats] = useState<AdminStats>({
     totalPolls: 0,
@@ -172,24 +173,45 @@ const AdminPanel: React.FC = () => {
       setLoading(true);
       
       // Fetch stats
-      const statsResponse = await fetch('http://localhost:5000/api/admin/stats', {
+      const statsResponse = await fetch(`${API_BASE_URL}/admin/stats`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
+      
+      if (!statsResponse.ok) {
+        const errorData = await statsResponse.json();
+        throw new Error(errorData.message || `Stats API error: ${statsResponse.status}`);
+      }
+      
       const statsData = await statsResponse.json();
+      console.log('📊 Stats response:', statsData);
+      
       if (statsData.success) {
         setStats(statsData.data);
+      } else {
+        throw new Error(statsData.message || 'Failed to fetch stats');
       }
 
       // Fetch all polls
-      const pollsResponse = await fetch('http://localhost:5000/api/admin/polls', {
+      const pollsResponse = await fetch(`${API_BASE_URL}/admin/polls`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
+      
+      if (!pollsResponse.ok) {
+        const errorData = await pollsResponse.json();
+        throw new Error(errorData.message || `Polls API error: ${pollsResponse.status}`);
+      }
+      
       const pollsData = await pollsResponse.json();
+      console.log('📋 Polls response:', pollsData);
+      
       if (pollsData.success) {
         setPolls(pollsData.data);
+      } else {
+        throw new Error(pollsData.message || 'Failed to fetch polls');
       }
     } catch (error) {
-      showNotification('Error fetching admin data', 'error');
+      console.error('fetchAdminData error:', error);
+      showNotification(`Error fetching admin data: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     } finally {
       setLoading(false);
     }
@@ -200,7 +222,9 @@ const AdminPanel: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/admin/polls', {
+      console.log('🔄 Creating poll:', newPoll);
+      
+      const response = await fetch(`${API_BASE_URL}/admin/polls`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -209,7 +233,16 @@ const AdminPanel: React.FC = () => {
         body: JSON.stringify(newPoll)
       });
 
+      console.log('📝 Create poll response status:', response.status);
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `API error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('📝 Create poll response data:', data);
+      
       if (data.success) {
         showNotification('Poll created successfully!', 'success');
         setNewPoll({
@@ -227,10 +260,11 @@ const AdminPanel: React.FC = () => {
         fetchAdminData();
         setActiveTab('polls');
       } else {
-        showNotification(data.message || 'Failed to create poll', 'error');
+        throw new Error(data.message || 'Failed to create poll');
       }
     } catch (error) {
-      showNotification('Error creating poll', 'error');
+      console.error('Create poll error:', error);
+      showNotification(`Error creating poll: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     }
   };
 
@@ -243,7 +277,7 @@ const AdminPanel: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/polls/${pollId}`, {
+      const response = await fetch(`${API_BASE_URL}/admin/polls/${pollId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -271,16 +305,23 @@ const AdminPanel: React.FC = () => {
     try {
       // Delete all polls one by one
       for (const poll of polls) {
-        await fetch(`http://localhost:5000/api/admin/polls/${poll.id}`, {
+        const pollId = poll._id || poll.id; // Use _id from MongoDB or fallback to id
+        const response = await fetch(`${API_BASE_URL}/admin/polls/${pollId}`, {
           method: 'DELETE',
           headers: { 'Authorization': `Bearer ${token}` }
         });
+        
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || 'Failed to delete poll');
+        }
       }
       
       showNotification('All polls cleared successfully!', 'success');
       fetchAdminData();
     } catch (error) {
-      showNotification('Error clearing polls', 'error');
+      console.error('Clear polls error:', error);
+      showNotification(`Error clearing polls: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     }
   };
 
@@ -289,7 +330,7 @@ const AdminPanel: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/polls/${pollId}/toggle`, {
+      const response = await fetch(`${API_BASE_URL}/admin/polls/${pollId}/toggle`, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,

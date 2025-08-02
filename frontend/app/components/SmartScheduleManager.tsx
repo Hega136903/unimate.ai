@@ -148,6 +148,9 @@ const SmartScheduleManager: React.FC = () => {
         `⚠️ Urgent: ${urgentDeadlines.length} deadline(s) approaching within 24 hours!`, 
         'error'
       );
+      
+      // Auto-send email notification if user has email notifications enabled
+      sendEmailAlerts(upcomingDeadlines);
     }
   };
 
@@ -300,6 +303,54 @@ const SmartScheduleManager: React.FC = () => {
     setTimeout(() => setNotification(null), 5000);
   };
 
+  // Email notification functions
+  const sendEmailAlerts = async (alerts: ScheduleItem[]) => {
+    const token = getAuthToken();
+    if (!token) return;
+
+    try {
+      const response = await fetch('http://localhost:5000/api/notifications/deadline-alerts', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ alerts }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        showNotification(`📧 Email alert sent successfully!`, 'success');
+      }
+    } catch (error) {
+      console.error('Error sending email alerts:', error);
+    }
+  };
+
+  const testEmailService = async () => {
+    const token = getAuthToken();
+    if (!token) return;
+
+    try {
+      const response = await fetch('http://localhost:5000/api/notifications/test-email', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        showNotification(`📧 Test email sent to ${data.data.email}`, 'success');
+      } else {
+        showNotification(data.message || 'Failed to send test email', 'error');
+      }
+    } catch (error) {
+      showNotification('Error testing email service', 'error');
+    }
+  };
+
   const getTimeRemaining = (endTime: string) => {
     const now = new Date();
     const deadline = new Date(endTime);
@@ -418,6 +469,20 @@ const SmartScheduleManager: React.FC = () => {
                   <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
                     {deadlineAlerts.length} alert{deadlineAlerts.length > 1 ? 's' : ''}
                   </span>
+                  <button
+                    onClick={() => sendEmailAlerts(deadlineAlerts)}
+                    className="bg-blue-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-700 flex items-center gap-1"
+                    title="Send email alerts"
+                  >
+                    📧 Email Me
+                  </button>
+                  <button
+                    onClick={testEmailService}
+                    className="bg-gray-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-700"
+                    title="Test email service"
+                  >
+                    🧪 Test
+                  </button>
                   <button
                     onClick={() => setShowDeadlineAlerts(false)}
                     className="text-gray-400 hover:text-gray-600 p-1"

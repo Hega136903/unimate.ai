@@ -1,24 +1,35 @@
 {
-  "version": 2,
-  "name": "unimate-ai",
-  "builds": [
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "headers": [
     {
-      "src": "package.json",
-      "use": "@vercel/next"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/api/(.*)",
+      "destination": "https://unimate-ai-backend.onrender.com/api/$1"
     }
-  ],
-  "env": {
-    "NEXT_PUBLIC_API_URL": "@unimate-api-url",
-    "NEXT_PUBLIC_APP_URL": "@unimate-app-url"
-  }
+  ]
 }

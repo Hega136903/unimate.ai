@@ -17,6 +17,7 @@ export interface IPoll extends Document {
   isAnonymous: boolean;
   category: 'student-election' | 'campus-decision' | 'feedback';
   createdBy: mongoose.Types.ObjectId;
+  totalVotes: number;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -95,6 +96,10 @@ const PollSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
     required: true
+  },
+  totalVotes: {
+    type: Number,
+    default: 0
   }
 }, {
   timestamps: true

@@ -1,45 +1,38 @@
 import { Request, Response } from 'express';
 import { logger } from '../utils/logger';
 import Poll, { IPoll } from '../models/Poll';
-// import Vote from '../models/Vote'; // Vote model is empty, using in-memory for now
+import Vote, { IVote } from '../models/Vote';
+
+// Database cleanup function
+export const cleanupInvalidVotes = async () => {
+  try {
+    console.log('🧹 Starting vote cleanup...');
+    
+    // Remove votes with null or undefined voterId
+    const deleteResult = await Vote.deleteMany({
+      $or: [
+        { voterId: null },
+        { voterId: undefined },
+        { voterId: '' }
+      ]
+    });
+    
+    console.log(`🧹 Removed ${deleteResult.deletedCount} invalid votes`);
+    
+    return deleteResult.deletedCount;
+  } catch (error) {
+    console.error('🧹 Cleanup error:', error);
+    return 0;
+  }
+};
 
 // Interfaces for voting system
-interface Vote {
-  id: string;
-  voterId: string;
-  pollId: string;
-  optionId: string;
-  timestamp: Date;
-  isAnonymous: boolean;
-}
-
-interface Poll {
-  id: string;
-  title: string;
-  description: string;
-  options: PollOption[];
-  createdBy: string;
-  createdAt: Date;
-  startTime: Date;
-  endTime: Date;
-  isActive: boolean;
-  isAnonymous: boolean;
-  allowedVoters: string[]; // user IDs or 'all'
-  category: 'student-election' | 'campus-decision' | 'feedback' | 'other';
-  totalVotes: number;
-}
-
 interface PollOption {
   id: string;
   text: string;
   description?: string;
   voteCount: number;
 }
-
-// In-memory storage (replace with database in production)
-let polls: Poll[] = [];
-
-let votes: Vote[] = [];
 
 // Get all active polls
 export const getActivePolls = async (req: Request, res: Response) => {
@@ -95,10 +88,13 @@ export const getActivePolls = async (req: Request, res: Response) => {
     }
 
     // Check which polls user has already voted in
-    const pollsWithVoteStatus = activePolls.map(poll => {
-      const userHasVoted = votes.some(vote => 
-        vote.pollId === (poll._id as any).toString() && vote.voterId === userId
-      );
+    const pollsWithVoteStatus = await Promise.all(activePolls.map(async (poll) => {
+      const userVote = await Vote.findOne({
+        pollId: poll._id,
+        voterId: userId
+      });
+      
+      const userHasVoted = !!userVote;
 
       const canVote = poll.isActive && 
                      now >= poll.startTime && 
@@ -114,7 +110,7 @@ export const getActivePolls = async (req: Request, res: Response) => {
         canVote,
         timeRemaining: poll.endTime.getTime() - now.getTime()
       };
-    });
+    }));
 
     logger.info(`Active polls retrieved for user ${userId}: ${activePolls.length} polls`);
 
@@ -153,9 +149,12 @@ export const getPollDetails = async (req: Request, res: Response) => {
       });
     }
 
-    const userHasVoted = votes.some(vote => 
-      vote.pollId === pollId && vote.voterId === userId
-    );
+    const userVote = await Vote.findOne({
+      pollId: poll._id,
+      voterId: userId
+    });
+    
+    const userHasVoted = !!userVote;
 
     const now = new Date();
     const pollObj = poll.toObject();
@@ -189,7 +188,16 @@ export const castVote = async (req: Request, res: Response) => {
     const userId = (req as any).user?.id;
     const { pollId, optionId } = req.body;
 
+    console.log('🗳️ Cast vote request:', {
+      userId,
+      pollId,
+      optionId,
+      userObject: (req as any).user,
+      authHeader: req.headers.authorization
+    });
+
     if (!userId) {
+      console.log('❌ No userId found in request.user:', (req as any).user);
       return res.status(401).json({
         success: false,
         message: 'User not authenticated'
@@ -222,9 +230,10 @@ export const castVote = async (req: Request, res: Response) => {
     }
 
     // Check if user has already voted
-    const existingVote = votes.find(vote => 
-      vote.pollId === pollId && vote.voterId === userId
-    );
+    const existingVote = await Vote.findOne({
+      pollId: pollId,
+      voterId: userId
+    });
 
     if (existingVote) {
       return res.status(400).json({
@@ -242,36 +251,55 @@ export const castVote = async (req: Request, res: Response) => {
       });
     }
 
-    // Create new vote
-    const newVote: Vote = {
-      id: `vote_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    // Create new vote in database
+    const newVote = new Vote({
       voterId: userId,
-      pollId,
-      optionId,
+      pollId: pollId,
+      optionId: optionId,
       timestamp: new Date(),
       isAnonymous: poll.isAnonymous
-    };
+    });
 
-    // Add vote to in-memory storage (until Vote model is implemented)
-    votes.push(newVote);
+    console.log('🗳️ Attempting to save vote:', {
+      voterId: userId,
+      pollId: pollId,
+      optionId: optionId
+    });
 
-    // Update vote counts in the database
-    const optionIndex = poll.options.findIndex(opt => opt.id === optionId);
-    if (optionIndex !== -1) {
-      poll.options[optionIndex] = {
-        ...poll.options[optionIndex],
-        voteCount: (poll.options[optionIndex].voteCount || 0) + 1
-      };
+    try {
+      await newVote.save();
+      console.log('✅ Vote saved successfully');
+    } catch (saveError: any) {
+      console.error('❌ Vote save error:', saveError);
+      
+      // Handle duplicate vote error specifically
+      if (saveError.code === 11000) {
+        return res.status(400).json({
+          success: false,
+          message: 'You have already voted in this poll'
+        });
+      }
+      
+      // Re-throw other errors
+      throw saveError;
     }
 
-    // Calculate total votes
-    const totalVotes = poll.options.reduce((sum, opt) => sum + (opt.voteCount || 0), 0);
-    
-    // Update the poll in database
-    await Poll.findByIdAndUpdate(pollId, {
-      options: poll.options,
-      totalVotes: totalVotes
-    });
+    // Update vote counts in the poll document
+    await Poll.findByIdAndUpdate(
+      pollId,
+      {
+        $inc: {
+          [`options.$[elem].voteCount`]: 1,
+          totalVotes: 1
+        }
+      },
+      {
+        arrayFilters: [{ 'elem.id': optionId }],
+        new: true
+      }
+    );
+
+    console.log(`✅ Vote cast successfully: Poll ${pollId}, Option ${optionId}, User ${userId}`);
 
     logger.info(`Vote cast successfully: Poll ${pollId}, Option ${optionId}, User ${userId}`);
 
@@ -279,7 +307,7 @@ export const castVote = async (req: Request, res: Response) => {
       success: true,
       message: 'Vote cast successfully',
       data: {
-        voteId: newVote.id,
+        voteId: (newVote._id as any).toString(),
         pollTitle: poll.title,
         selectedOption: option.text,
         timestamp: newVote.timestamp
@@ -300,6 +328,8 @@ export const getPollResults = async (req: Request, res: Response) => {
     const userId = (req as any).user?.id;
     const { pollId } = req.params;
 
+    console.log('📊 Getting poll results for pollId:', pollId, 'userId:', userId);
+
     if (!userId) {
       return res.status(401).json({
         success: false,
@@ -309,24 +339,55 @@ export const getPollResults = async (req: Request, res: Response) => {
 
     const poll = await Poll.findById(pollId);
     if (!poll) {
+      console.log('❌ Poll not found:', pollId);
       return res.status(404).json({
         success: false,
         message: 'Poll not found'
       });
     }
 
-    // Calculate total votes from options
-    const totalVotes = poll.options.reduce((sum, opt) => sum + (opt.voteCount || 0), 0);
+    console.log('📊 Found poll:', {
+      id: poll._id,
+      title: poll.title,
+      optionsCount: poll.options.length,
+      options: poll.options.map(o => ({ id: o.id, text: o.text }))
+    });
+
+    // Get all votes for this poll from the database
+    const votes = await Vote.find({ pollId: poll._id });
+    console.log('📊 Found votes:', votes.length, votes.map(v => ({ optionId: v.optionId, voterId: v.voterId })));
+
+    // Calculate vote counts for each option
+    const optionsWithVotes = poll.options.map((option: any) => {
+      const optionVotes = votes.filter(vote => vote.optionId === option.id);
+      const voteCount = optionVotes.length;
+      
+      console.log(`📊 Option "${option.text}" (${option.id}): ${voteCount} votes`);
+      
+      return {
+        id: option.id,
+        text: option.text,
+        description: option.description || '',
+        voteCount: voteCount
+      };
+    });
+
+    // Calculate total votes
+    const totalVotes = votes.length;
+    console.log('📊 Total votes:', totalVotes);
 
     // Calculate percentages
-    const resultsWithPercentages = poll.options.map(option => ({
+    const resultsWithPercentages = optionsWithVotes.map(option => ({
       ...option,
-      percentage: totalVotes > 0 ? Math.round(((option.voteCount || 0) / totalVotes) * 100) : 0
+      percentage: totalVotes > 0 ? Math.round((option.voteCount / totalVotes) * 100) : 0
     }));
 
-    const userVote = votes.find(vote => 
-      vote.pollId === pollId && vote.voterId === userId
-    );
+    const userVote = await Vote.findOne({
+      pollId: poll._id,
+      voterId: userId
+    });
+
+    console.log('📊 User vote:', userVote ? { optionId: userVote.optionId } : 'No vote found');
 
     const results = {
       poll: {
@@ -335,12 +396,19 @@ export const getPollResults = async (req: Request, res: Response) => {
         description: poll.description,
         totalVotes: totalVotes,
         endTime: poll.endTime,
-        isActive: poll.isActive
+        isActive: poll.isActive,
+        hasEnded: new Date() > poll.endTime
       },
       options: resultsWithPercentages,
       userVoted: !!userVote,
       userSelection: userVote ? userVote.optionId : null
     };
+
+    console.log('📊 Final results:', {
+      totalVotes: results.poll.totalVotes,
+      options: results.options.map(o => ({ text: o.text, votes: o.voteCount, percentage: o.percentage })),
+      userVoted: results.userVoted
+    });
 
     logger.info(`Poll results retrieved for poll ${pollId} by user ${userId}`);
 
@@ -350,76 +418,11 @@ export const getPollResults = async (req: Request, res: Response) => {
       data: results
     });
   } catch (error) {
+    console.error('📊 Get poll results error:', error);
     logger.error('Get poll results error:', error);
     return res.status(500).json({
       success: false,
       message: 'Failed to retrieve poll results'
-    });
-  }
-};
-
-// Create new poll (admin only)
-export const createPoll = async (req: Request, res: Response) => {
-  try {
-    const userId = (req as any).user?.id;
-    const userRole = (req as any).user?.role;
-    const { title, description, options, startTime, endTime, isAnonymous, category } = req.body;
-
-    if (!userId) {
-      return res.status(401).json({
-        success: false,
-        message: 'User not authenticated'
-      });
-    }
-
-    if (userRole !== 'admin') {
-      return res.status(403).json({
-        success: false,
-        message: 'Only administrators can create polls'
-      });
-    }
-
-    if (!title || !description || !options || options.length < 2) {
-      return res.status(400).json({
-        success: false,
-        message: 'Title, description, and at least 2 options are required'
-      });
-    }
-
-    const newPoll: Poll = {
-      id: `poll_${Date.now()}`,
-      title,
-      description,
-      options: options.map((opt: string, index: number) => ({
-        id: `opt_${Date.now()}_${index}`,
-        text: opt,
-        voteCount: 0
-      })),
-      createdBy: userId,
-      createdAt: new Date(),
-      startTime: new Date(startTime),
-      endTime: new Date(endTime),
-      isActive: true,
-      isAnonymous: isAnonymous || true,
-      allowedVoters: ['all'],
-      category: category || 'other',
-      totalVotes: 0
-    };
-
-    polls.push(newPoll);
-
-    logger.info(`New poll created: ${newPoll.id} by user ${userId}`);
-
-    return res.status(201).json({
-      success: true,
-      message: 'Poll created successfully',
-      data: newPoll
-    });
-  } catch (error) {
-    logger.error('Create poll error:', error);
-    return res.status(500).json({
-      success: false,
-      message: 'Failed to create poll'
     });
   }
 };

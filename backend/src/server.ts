@@ -19,9 +19,22 @@ import scheduleRoutes from './routes/schedule';
 import portfolioRoutes from './routes/portfolio';
 import adminRoutes from './routes/admin';
 import seedRoutes from './routes/seed';
+import notificationRoutes from './routes/notifications';
 
-// Load environment variables
-dotenv.config();
+// Load environment variables FIRST
+console.log('🔍 Current working directory:', process.cwd());
+console.log('🔍 Looking for .env file at:', require('path').resolve('.env'));
+const result = dotenv.config({ path: '.env' });
+console.log('🔍 dotenv result:', result);
+console.log('🔍 EMAIL_USER:', process.env.EMAIL_USER);
+console.log('🔍 EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '[SET]' : '[NOT SET]');
+
+// Import and initialize email service AFTER environment variables are loaded
+import { emailService } from './services/emailService';
+emailService.initialize();
+
+// Import services AFTER environment variables are loaded
+import './services/scheduleEmailService'; // Start automatic email scheduler
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -58,6 +71,7 @@ app.use('/api/schedule', scheduleRoutes);
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/seed', seedRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

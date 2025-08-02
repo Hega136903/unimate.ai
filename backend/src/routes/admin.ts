@@ -5,6 +5,7 @@ import Vote from '../models/Vote';
 import Poll from '../models/Poll';
 import { User } from '../models/User';
 import { logger } from '../utils/logger';
+import { cleanupInvalidVotes } from '../controllers/votingController';
 
 const router = express.Router();
 
@@ -55,39 +56,100 @@ router.get('/stats', authenticateToken, requireAdmin, async (req: AuthenticatedR
 // GET /api/admin/polls - Get all polls with details
 router.get('/polls', authenticateToken, requireAdmin, async (req: AuthenticatedRequest, res: Response) => {
   try {
+    console.log('📋 Admin requesting all polls...');
+    
     const polls = await Poll.find()
       .sort({ createdAt: -1 })
       .populate('createdBy', 'firstName lastName email');
 
+    console.log('📋 Found polls from database:', polls.length);
+    console.log('📋 Poll details:', polls.map(p => ({
+      id: p._id,
+      title: p.title,
+      options: p.options.length,
+      optionDetails: p.options
+    })));
+
     // Get vote counts for each poll
     const pollsWithVotes = await Promise.all(
       polls.map(async (poll: any) => {
-        const votes = await Vote.find({ pollId: poll._id });
-        const totalVotes = votes.length;
-        
-        // Calculate vote counts for each option
-        const optionVotes = poll.options.map((option: any) => {
-          const optionVoteCount = votes.filter((vote: any) => vote.optionId === option.id).length;
-          return {
-            ...option.toObject(),
-            voteCount: optionVoteCount,
-            percentage: totalVotes > 0 ? Math.round((optionVoteCount / totalVotes) * 100) : 0
-          };
-        });
+        try {
+          // Get votes from database for accurate count
+          const votes = await Vote.find({ pollId: poll._id });
+          const totalVotes = votes.length;
+          
+          console.log(`📋 Poll "${poll.title}" has ${totalVotes} votes from database`);
+          
+          // Calculate vote counts for each option from actual votes
+          const optionVotes = poll.options.map((option: any) => {
+            const optionVoteCount = votes.filter((vote: any) => vote.optionId === option.id).length;
+            console.log(`📋 Option "${option.text}" (id: ${option.id}) has ${optionVoteCount} votes`);
+            
+            return {
+              id: option.id,
+              text: option.text,
+              description: option.description || '',
+              voteCount: optionVoteCount,
+              percentage: totalVotes > 0 ? Math.round((optionVoteCount / totalVotes) * 100) : 0
+            };
+          });
 
-        return {
-          ...poll.toObject(),
-          totalVotes,
-          options: optionVotes
-        };
+          // Update the poll document with correct vote counts
+          if (totalVotes !== poll.totalVotes) {
+            console.log(`📋 Updating poll totalVotes from ${poll.totalVotes} to ${totalVotes}`);
+            await Poll.findByIdAndUpdate(poll._id, { 
+              totalVotes: totalVotes,
+              options: optionVotes.map((ov: any) => ({
+                id: ov.id,
+                text: ov.text,
+                description: ov.description,
+                voteCount: ov.voteCount
+              }))
+            });
+          }
+
+          const pollWithVotes = {
+            ...poll.toObject(),
+            totalVotes,
+            options: optionVotes
+          };
+          
+          console.log(`📋 Final poll data for "${poll.title}":`, {
+            id: pollWithVotes._id,
+            title: pollWithVotes.title,
+            totalVotes: pollWithVotes.totalVotes,
+            options: pollWithVotes.options.map((o: any) => ({
+              id: o.id,
+              text: o.text,
+              voteCount: o.voteCount
+            }))
+          });
+
+          return pollWithVotes;
+        } catch (error) {
+          console.error(`📋 Error processing poll ${poll.title}:`, error);
+          // Return poll with zero votes if error occurs
+          return {
+            ...poll.toObject(),
+            totalVotes: 0,
+            options: poll.options.map((option: any) => ({
+              ...option.toObject(),
+              voteCount: 0,
+              percentage: 0
+            }))
+          };
+        }
       })
     );
+
+    console.log('📋 Sending polls to admin panel:', pollsWithVotes.length);
 
     res.json({
       success: true,
       data: pollsWithVotes
     });
   } catch (error) {
+    console.error('📋 Error fetching admin polls:', error);
     logger.error('Error fetching polls:', error);
     res.status(500).json({
       success: false,
@@ -142,11 +204,12 @@ router.post('/polls', [
       return;
     }
 
-    // Create poll options with unique IDs
+    // Create poll options with unique IDs and zero vote counts
     const pollOptions = options.map((option: any, index: number) => ({
       id: `option_${Date.now()}_${index}`,
       text: option.text.trim(),
-      description: option.description?.trim() || ''
+      description: option.description?.trim() || '',
+      voteCount: 0
     }));
 
     const poll = new Poll({
@@ -159,6 +222,7 @@ router.post('/polls', [
       isAnonymous,
       category,
       createdBy: req.user.id,
+      totalVotes: 0,
       createdAt: new Date()
     });
 
@@ -382,6 +446,26 @@ router.get('/users', authenticateToken, requireAdmin, async (req: AuthenticatedR
     res.status(500).json({
       success: false,
       message: 'Internal server error'
+    });
+  }
+});
+
+// POST /api/admin/cleanup - Clean up invalid votes
+router.post('/cleanup', authenticateToken, requireAdmin, async (req: AuthenticatedRequest, res: Response) => {
+  try {
+    console.log('🧹 Admin cleanup request received');
+    const deletedCount = await cleanupInvalidVotes();
+    
+    res.json({
+      success: true,
+      message: `Cleanup completed. Removed ${deletedCount} invalid votes.`,
+      data: { deletedCount }
+    });
+  } catch (error) {
+    logger.error('Error during cleanup:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Internal server error during cleanup'
     });
   }
 });

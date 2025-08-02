@@ -4,8 +4,7 @@ import {
   getActivePolls,
   getPollDetails,
   castVote,
-  getPollResults,
-  createPoll
+  getPollResults
 } from '../controllers/votingController';
 
 const router = Router();
@@ -24,8 +23,5 @@ router.post('/vote', castVote);
 
 // Get poll results
 router.get('/polls/:pollId/results', getPollResults);
-
-// Create new poll (admin only)
-router.post('/polls', createPoll);
 
 export default router;

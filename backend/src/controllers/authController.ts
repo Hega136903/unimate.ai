@@ -3,6 +3,7 @@ import jwt, { SignOptions } from 'jsonwebtoken';
 import { validationResult } from 'express-validator';
 import { User, IUser } from '../models/User';
 import { logger } from '../utils/logger';
+import { initializeUserSchedule } from './scheduleController';
 
 interface AuthenticatedRequest extends Request {
   user?: IUser;
@@ -61,7 +62,12 @@ export const register = async (req: Request, res: Response): Promise<void> => {
     user.lastLogin = new Date();
     await user.save();
 
+    // Initialize user with sample schedule items
+    const userId = (user._id as any).toString();
+    initializeUserSchedule(userId);
+
     logger.info(`New user registered: ${email}`);
+    logger.info(`Sample schedule items created for user: ${userId}`);
 
     res.status(201).json({
       success: true,

@@ -56,7 +56,8 @@ interface TimeSlot {
 }
 
 // In-memory storage (replace with database in production)
-let schedules: ScheduleItem[] = [
+export let schedules: ScheduleItem[] = [
+  // Sample items - these will be filtered by user
   {
     id: 'sch_1',
     title: 'Data Structures & Algorithms',
@@ -80,17 +81,17 @@ let schedules: ScheduleItem[] = [
       { time: 5, sent: false }
     ],
     color: '#3B82F6',
-    createdBy: 'system',
+    createdBy: 'sample_user', // This will be filtered out until real users create items
     createdAt: new Date(),
     updatedAt: new Date()
   },
   {
     id: 'sch_2',
-    title: 'Machine Learning Assignment',
-    description: 'Implement neural network from scratch',
+    title: 'Machine Learning Assignment - URGENT!',
+    description: 'Implement neural network from scratch - Due in 12 hours!',
     type: 'assignment',
-    startTime: new Date('2025-08-03T14:00:00'),
-    endTime: new Date('2025-08-03T18:00:00'),
+    startTime: new Date('2025-08-03T08:00:00'),
+    endTime: new Date('2025-08-03T11:59:00'), // Due tomorrow at 11:59 AM
     course: 'ML-401',
     professor: 'Dr. Michael Chen',
     priority: 'urgent',
@@ -102,7 +103,7 @@ let schedules: ScheduleItem[] = [
       { time: 10, sent: false }
     ],
     color: '#EF4444',
-    createdBy: 'system',
+    createdBy: 'sample_user', // This will be filtered out until real users create items
     createdAt: new Date(),
     updatedAt: new Date()
   },
@@ -111,8 +112,8 @@ let schedules: ScheduleItem[] = [
     title: 'Database Systems Midterm',
     description: 'Covers SQL, NoSQL, and database design',
     type: 'exam',
-    startTime: new Date('2025-08-05T10:00:00'),
-    endTime: new Date('2025-08-05T12:00:00'),
+    startTime: new Date('2025-08-03T14:00:00'),
+    endTime: new Date('2025-08-03T16:00:00'), // Tomorrow afternoon
     location: 'Exam Hall B',
     course: 'DB-302',
     professor: 'Dr. Emily Davis',
@@ -125,15 +126,83 @@ let schedules: ScheduleItem[] = [
       { time: 30, sent: false }
     ],
     color: '#DC2626',
-    createdBy: 'system',
+    createdBy: 'sample_user', // This will be filtered out until real users create items
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    id: 'sch_4',
+    title: 'React Project Submission - CRITICAL!',
+    description: 'Final project submission for Web Development course',
+    type: 'assignment',
+    startTime: new Date(),
+    endTime: new Date(Date.now() + 6 * 60 * 60 * 1000), // Due in 6 hours!
+    course: 'WEB-501',
+    professor: 'Prof. Alex Rodriguez',
+    priority: 'urgent',
+    status: 'scheduled',
+    isRecurring: false,
+    reminders: [
+      { time: 60, sent: false },
+      { time: 30, sent: false },
+      { time: 10, sent: false }
+    ],
+    color: '#DC2626',
+    createdBy: 'sample_user', // This will be filtered out until real users create items
     createdAt: new Date(),
     updatedAt: new Date()
   }
 ];
 
+// Helper function to initialize a new user with sample schedule items
+export const initializeUserSchedule = (userId: string) => {
+  const sampleItems: ScheduleItem[] = [
+    {
+      id: `sch_${userId}_welcome_1`,
+      title: '🎉 Welcome to Unimate.AI!',
+      description: 'Complete your profile setup and explore features',
+      type: 'personal',
+      startTime: new Date(),
+      endTime: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
+      priority: 'medium',
+      status: 'scheduled',
+      isRecurring: false,
+      reminders: [{ time: 30, sent: false }],
+      color: '#10B981',
+      createdBy: userId,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      id: `sch_${userId}_sample_assignment`,
+      title: 'Sample Assignment - Try Email Alerts',
+      description: 'This is a sample urgent assignment to test email notifications',
+      type: 'assignment',
+      startTime: new Date(),
+      endTime: new Date(Date.now() + 3 * 60 * 60 * 1000), // 3 hours from now
+      course: 'DEMO-101',
+      priority: 'urgent',
+      status: 'scheduled',
+      isRecurring: false,
+      reminders: [
+        { time: 60, sent: false },
+        { time: 30, sent: false }
+      ],
+      color: '#EF4444',
+      createdBy: userId,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
+  ];
+
+  // Add sample items for the new user
+  schedules.push(...sampleItems);
+  return sampleItems;
+};
+
 let studySessions: StudySession[] = [];
 
-// Get student schedule
+  // Get student schedule
 export const getStudentSchedule = async (req: Request, res: Response) => {
   try {
     const userId = (req as any).user?.id;
@@ -146,14 +215,15 @@ export const getStudentSchedule = async (req: Request, res: Response) => {
       });
     }
 
-    let filteredSchedule = schedules;
+    // FIXED: Filter by user first - each user gets their own schedule
+    let filteredSchedule = schedules.filter(item => item.createdBy === userId);
 
     // Filter by date range
     if (startDate && endDate) {
       const start = new Date(startDate as string);
       const end = new Date(endDate as string);
       
-      filteredSchedule = schedules.filter(item => 
+      filteredSchedule = filteredSchedule.filter(item => 
         item.startTime >= start && item.startTime <= end
       );
     }
@@ -164,9 +234,7 @@ export const getStudentSchedule = async (req: Request, res: Response) => {
     }
 
     // Sort by start time
-    filteredSchedule.sort((a, b) => a.startTime.getTime() - b.startTime.getTime());
-
-    logger.info(`Schedule retrieved for user ${userId}: ${filteredSchedule.length} items`);
+    filteredSchedule.sort((a, b) => a.startTime.getTime() - b.startTime.getTime());    logger.info(`Schedule retrieved for user ${userId}: ${filteredSchedule.length} items`);
 
     return res.json({
       success: true,
@@ -345,7 +413,7 @@ export const deleteScheduleItem = async (req: Request, res: Response) => {
   }
 };
 
-// Get smart schedule suggestions
+  // Get smart schedule suggestions
 export const getSmartSuggestions = async (req: Request, res: Response) => {
   try {
     const userId = (req as any).user?.id;
@@ -361,12 +429,13 @@ export const getSmartSuggestions = async (req: Request, res: Response) => {
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const weekEnd = new Date(todayStart.getTime() + 7 * 24 * 60 * 60 * 1000);
 
+    // FIXED: Get user-specific schedule for suggestions
+    const userSchedule = schedules.filter(item => item.createdBy === userId);
+    
     // Get this week's schedule
-    const thisWeekSchedule = schedules.filter(item => 
+    const thisWeekSchedule = userSchedule.filter(item => 
       item.startTime >= todayStart && item.startTime <= weekEnd
-    );
-
-    // Generate suggestions
+    );    // Generate suggestions
     const suggestions = {
       studyRecommendations: [
         {
@@ -538,7 +607,9 @@ export const getScheduleAnalytics = async (req: Request, res: Response) => {
     const now = new Date();
     const weekStart = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     
-    const weeklySchedule = schedules.filter(item => 
+    // FIXED: Get user-specific schedule for analytics
+    const userSchedule = schedules.filter(item => item.createdBy === userId);
+    const weeklySchedule = userSchedule.filter(item => 
       item.startTime >= weekStart && item.startTime <= now
     );
 

@@ -212,8 +212,7 @@ const UserSchema = new Schema<IUser>(
   }
 );
 
-// Index for performance
-UserSchema.index({ email: 1 });
+// Index for performance (email index is already created by unique: true)
 UserSchema.index({ university: 1, studentId: 1 });
 
 // Hash password before saving

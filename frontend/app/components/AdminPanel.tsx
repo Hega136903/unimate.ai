@@ -32,7 +32,7 @@ interface Poll {
 
 const AdminPanel: React.FC = () => {
   const { user, isLoggedIn } = useAuth();
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://unimate-ai.onrender.com/api';
   const [activeTab, setActiveTab] = useState<'dashboard' | 'polls' | 'create' | 'analytics'>('dashboard');
   const [stats, setStats] = useState<AdminStats>({
     totalPolls: 0,
@@ -829,3 +829,4 @@ const AdminPanel: React.FC = () => {
 };
 
 export default AdminPanel;
+

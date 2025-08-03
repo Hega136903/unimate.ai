@@ -1,0 +1,1696 @@
+2025-08-01 23:47:20:4720 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-01 23:47:20:4720 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-01 23:47:20:4720 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-01 23:47:21:4721 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-01 23:47:21:4721 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-01 23:47:29:4729 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-01 23:47:37:4737 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:48:55:4855 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-01 23:48:55:4855 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-01 23:48:55:4855 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-01 23:48:56:4856 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-01 23:48:56:4856 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-01 23:49:02:492 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:50:34:5034 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:51:46:5146 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-01 23:51:47:5147 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-01 23:51:47:5147 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-01 23:51:47:5147 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-01 23:51:54:5154 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:51:57:5157 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:53:14:5314 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-01 23:53:14:5314 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-01 23:53:14:5314 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-01 23:53:16:5316 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-01 23:53:16:5316 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-01 23:53:18:5318 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-01 23:53:31:5331 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:32:5332 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-01 23:53:36:5336 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:36:5336 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-01 23:53:36:5336 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:36:5336 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:36:5336 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-01 23:53:36:5336 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:37:5337 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-01 23:53:37:5337 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-01 23:53:42:5342 [32minfo[39m: [32mVote cast successfully: Poll 688cf3b0179b2ce5f76a74f5, Option option_1754067888584_0, User 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:42:5342 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-01 23:53:42:5342 [32minfo[39m: [32mPoll results retrieved for poll 688cf3b0179b2ce5f76a74f5 by user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:57:5357 [32minfo[39m: [32mPoll results retrieved for poll 688cf3b0179b2ce5f76a74f5 by user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:53:58:5358 [32minfo[39m: [32mPoll results retrieved for poll 688cf3b0179b2ce5f76a74f5 by user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:54:09:549 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-01 23:54:48:5448 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in deleted poll: d[39m
+2025-08-01 23:54:54:5454 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-01 23:55:04:554 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-01 23:55:07:557 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-01 23:55:42:5542 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-01 23:55:42:5542 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-01 23:55:42:5542 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-01 23:55:44:5544 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-01 23:55:44:5544 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-01 23:55:44:5544 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-01 23:55:45:5545 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:16:21:1621 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 19:16:21:1621 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 19:16:21:1621 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 19:16:21:1621 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 19:16:21:1621 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 19:16:28:1628 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:16:28:1628 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:16:49:1649 [32minfo[39m: [32mVote cast successfully: Poll 688daaac5dd96bcae7d0b864, Option option_1754114732309_1, User 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:49:1649 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:16:49:1649 [32minfo[39m: [32mPoll results retrieved for poll 688daaac5dd96bcae7d0b864 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:57:1657 [32minfo[39m: [32mPoll results retrieved for poll 688daaac5dd96bcae7d0b864 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:58:1658 [32minfo[39m: [32mPoll results retrieved for poll 688daaac5dd96bcae7d0b864 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:58:1658 [32minfo[39m: [32mPoll results retrieved for poll 688daaac5dd96bcae7d0b864 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:58:1658 [32minfo[39m: [32mPoll results retrieved for poll 688daaac5dd96bcae7d0b864 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:59:1659 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:16:59:1659 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:16:59:1659 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:17:00:170 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:17:00:170 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:17:00:170 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:17:20:1720 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 19:17:47:1747 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in deleted poll: gg[39m
+2025-08-02 19:18:01:181 [31merror[39m: [31mError deleting poll: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Poll"[39m
+2025-08-02 19:18:04:184 [31merror[39m: [31mError deleting poll: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Poll"[39m
+2025-08-02 19:21:38:2138 [31merror[39m: [31mError deleting poll: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Poll"[39m
+2025-08-02 19:21:45:2145 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in deleted poll: ededdd[39m
+2025-08-02 19:21:52:2152 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 19:21:52:2152 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 19:21:54:2154 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 19:22:02:222 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 19:22:03:223 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 19:22:06:226 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:22:06:226 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:22:06:226 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:24:24:2424 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 19:24:24:2424 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 19:24:24:2424 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 19:24:25:2425 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 19:24:25:2425 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 19:24:52:2452 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 19:24:53:2453 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 19:24:54:2454 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:24:54:2454 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:24:54:2454 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:24:54:2454 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:24:54:2454 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:24:54:2454 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:24:58:2458 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 19:25:53:2553 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in created poll: 44[39m
+2025-08-02 19:26:02:262 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in activated poll: 44[39m
+2025-08-02 19:26:08:268 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:26:08:268 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:26:14:2614 [32minfo[39m: [32mVote cast successfully: Poll 688e18e9741379f2bd5ea8a6, Option option_1754142953441_0, User 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:14:2614 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:26:14:2614 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:16:2616 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:24:2624 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:26:24:2624 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:24:2624 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:24:2624 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:24:2624 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 19:26:24:2624 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 19:26:26:2626 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:26:26:2626 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 19:26:29:2629 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 19:31:49:3149 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 19:31:49:3149 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 19:31:49:3149 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 19:31:50:3150 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 19:31:50:3150 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 19:32:01:321 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m69[0m:[93m28[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m69[0m       const userHasVoted = votes.some(vote =>[39m
+[31m[7m  [0m [91m                           ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m69[0m:[93m39[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m69[0m       const userHasVoted = votes.some(vote =>[39m
+[31m[7m  [0m [91m                                      ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m126[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m126[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m126[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m126[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m195[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m195[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m195[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m195[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m216[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Vote' refers to a value, but is being used as a type here. Did you mean 'typeof Vote'?[39m
+
+[31m[7m216[0m     const newVote: Vote = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m226[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m226[0m     votes.push(newVote);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m297[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m297[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m297[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m297[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m359[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m359[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m379[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m379[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:16:3216 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m129[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m129[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m129[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m129[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m198[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m198[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m198[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m198[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m219[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Vote' refers to a value, but is being used as a type here. Did you mean 'typeof Vote'?[39m
+
+[31m[7m219[0m     const newVote: Vote = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m229[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m229[0m     votes.push(newVote);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m300[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m300[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m300[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m300[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m362[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m362[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m382[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m382[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:23:3223 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m201[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m201[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m201[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m201[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m222[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Vote' refers to a value, but is being used as a type here. Did you mean 'typeof Vote'?[39m
+
+[31m[7m222[0m     const newVote: Vote = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m232[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m232[0m     votes.push(newVote);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m303[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m303[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m303[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m303[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m365[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m365[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m385[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m385[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:36:3236 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m364[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m364[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m384[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m384[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:44:3244 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m257[0m:[93m17[0m - [91merror[0m[90m TS18046: [0m'newVote._id' is of type 'unknown'.[39m
+
+[31m[7m257[0m         voteId: newVote._id.toString(),[39m
+[31m[7m   [0m [91m                ~~~~~~~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m364[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m364[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m384[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m384[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:52:3252 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m364[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m364[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m384[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m384[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:33:09:339 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m365[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m365[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m385[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m385[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:33:28:3328 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:34:20:3420 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:51:29:5129 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:51:33:5133 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:53:23:5323 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m28[0m:[93m23[0m - [91merror[0m[90m TS2304: [0mCannot find name 'createPoll'.[39m
+
+[31m[7m28[0m router.post('/polls', createPoll);[39m
+[31m[7m  [0m [91m                      ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:53:33:5333 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 21:53:33:5333 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 21:53:33:5333 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 21:53:34:5334 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 21:53:34:5334 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 21:53:56:5356 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 21:53:56:5356 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 21:53:56:5356 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 21:53:58:5358 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 21:53:58:5358 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 21:54:02:542 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 21:54:24:5424 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 21:54:32:5432 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 21:54:35:5435 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 21:54:35:5435 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 21:54:54:5454 [32minfo[39m: [32mVote cast successfully: Poll 688e18e9741379f2bd5ea8a6, Option option_1754142953441_1, User 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:54:55:5455 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 21:54:55:5455 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:54:59:5459 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:54:59:5459 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 21:54:59:5459 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:54:59:5459 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:54:59:5459 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:54:59:5459 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 21:55:01:551 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 21:55:02:552 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 21:55:05:555 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 21:56:24:5624 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in created poll: dddd[39m
+2025-08-02 21:56:26:5626 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in activated poll: dddd[39m
+2025-08-02 21:56:56:5656 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 21:57:21:5721 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 21:57:28:5728 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 21:57:31:5731 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 21:57:32:5732 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 21:58:28:5828 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 21:58:28:5828 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 21:58:28:5828 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 21:58:29:5829 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 21:58:29:5829 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 21:58:30:5830 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 21:58:30:5830 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 21:58:35:5835 [32minfo[39m: [32mVote cast successfully: Poll 688e3c30f5a7cefd301718e2, Option option_1754151984212_0, User 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:58:35:5835 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 21:58:36:5836 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:58:39:5839 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:58:40:5840 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:58:44:5844 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 21:58:49:5849 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:01:28:128 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m104[0m:[93m46[0m - [91merror[0m[90m TS7006: [0mParameter 'o' implicitly has an 'any' type.[39m
+
+[31m[7m104[0m           options: pollWithVotes.options.map(o => ({[39m
+[31m[7m   [0m [91m                                             ~[0m[39m
+[31m[39m
+2025-08-02 22:02:42:242 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m104[0m:[93m46[0m - [91merror[0m[90m TS7006: [0mParameter 'o' implicitly has an 'any' type.[39m
+
+[31m[7m104[0m           options: pollWithVotes.options.map(o => ({[39m
+[31m[7m   [0m [91m                                             ~[0m[39m
+[31m[39m
+2025-08-02 22:02:56:256 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:02:56:256 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:02:56:256 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:02:57:257 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:02:57:257 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:03:25:325 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:03:25:325 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:03:25:325 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:03:26:326 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:03:26:326 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:03:47:347 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:03:54:354 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:03:57:357 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:03:58:358 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:04:00:40 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:02:42 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:07:47 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:04:07:47 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:07:47 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:07:47 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:07:47 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:04:07:47 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:10:410 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:10:410 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:10:410 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:04:10:410 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:10:410 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:04:10:410 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:04:21:421 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:06:15:615 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:06:15:615 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:06:15:615 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:06:16:616 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 22:06:16:616 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:06:24:624 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:06:34:634 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:06:35:635 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:06:39:639 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:06:39:639 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:08:08:88 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-02 22:08:09:89 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:08:09:89 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:09:00:90 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:09:00:90 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:09:00:90 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:09:00:90 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-02 22:09:01:91 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:09:01:91 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:09:01:91 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:09:01:91 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:09:43:943 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:09:43:943 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:09:43:943 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:09:44:944 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 22:09:44:944 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:10:16:1016 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:10:17:1017 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:10:19:1019 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:10:24:1024 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:10:29:1029 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:11:12:1112 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:11:12:1112 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:11:12:1112 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:11:13:1113 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:11:13:1113 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:29:13:2913 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:29:13:2913 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:29:13:2913 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:29:13:2913 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:29:13:2913 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:29:56:2956 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:29:56:2956 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:29:56:2956 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:29:57:2957 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 22:29:57:2957 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:30:33:3033 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:30:45:3045 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:30:45:3045 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:30:55:3055 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:31:01:311 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:31:06:316 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:34:57:3457 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-02 22:34:59:3459 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:34:59:3459 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:35:30:3530 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:35:30:3530 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:35:30:3530 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:35:31:3531 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:35:31:3531 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:35:48:3548 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:35:48:3548 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:35:48:3548 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:35:50:3550 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:35:50:3550 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:35:59:3559 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:35:59:3559 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:35:59:3559 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:36:00:360 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:36:00:360 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:36:42:3642 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m101[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'ov' implicitly has an 'any' type.[39m
+
+[31m[7m101[0m               options: optionVotes.map(ov => ({[39m
+[31m[7m   [0m [91m                                       ~~[0m[39m
+[31m[39m
+2025-08-02 22:37:55:3755 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m101[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'ov' implicitly has an 'any' type.[39m
+
+[31m[7m101[0m               options: optionVotes.map(ov => ({[39m
+[31m[7m   [0m [91m                                       ~~[0m[39m
+[31m[39m
+2025-08-02 22:38:27:3827 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m101[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'ov' implicitly has an 'any' type.[39m
+
+[31m[7m101[0m               options: optionVotes.map(ov => ({[39m
+[31m[7m   [0m [91m                                       ~~[0m[39m
+[31m[39m
+2025-08-02 22:40:31:4031 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:40:31:4031 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:40:31:4031 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:40:32:4032 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 22:40:32:4032 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:42:07:427 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:42:07:427 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:42:07:427 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:42:08:428 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:42:08:428 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:43:33:4333 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:43:34:4334 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 22:43:35:4335 [32minfo[39m: [32mPoll results retrieved for poll 688e3c30f5a7cefd301718e2 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:43:39:4339 [32minfo[39m: [32mPoll results retrieved for poll 688e18e9741379f2bd5ea8a6 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:43:42:4342 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:43:42:4342 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:43:42:4342 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:43:42:4342 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:43:42:4342 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:43:42:4342 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:43:50:4350 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:44:47:4447 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:44:47:4447 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:44:47:4447 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:44:49:4449 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:44:49:4449 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:45:28:4528 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in deleted poll: dddd[39m
+2025-08-02 22:45:28:4528 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in deleted poll: 44[39m
+2025-08-02 22:45:42:4542 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:45:56:4556 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:45:57:4557 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 22:46:01:461 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:46:01:461 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:46:01:461 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:46:01:461 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:46:01:461 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:46:01:461 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:46:06:466 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:47:19:4719 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in created poll: hega[39m
+2025-08-02 22:47:21:4721 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in activated poll: hega[39m
+2025-08-02 22:47:29:4729 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:47:40:4740 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:47:41:4741 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:47:41:4741 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:41:4741 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:41:4741 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:41:4741 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:47:41:4741 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:44:4744 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 22:47:44:4744 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 22:47:50:4750 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 22:47:50:4750 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 0 polls[39m
+2025-08-02 22:47:51:4751 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:52:4752 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:47:52:4752 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:52:4752 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:47:52:4752 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:48:26:4826 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:48:26:4826 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:48:26:4826 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:27:4827 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:48:31:4831 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 22:48:32:4832 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 22:48:40:4840 [32minfo[39m: [32mVote cast successfully: Poll 688e481e21a666aa5fd9f216, Option option_1754155038892_0, User 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:40:4840 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 22:48:40:4840 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:46:4846 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:48:4848 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:48:54:4854 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:49:29:4929 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:49:29:4929 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:49:29:4929 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:49:29:4929 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:49:29:4929 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:49:29:4929 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 22:49:30:4930 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 22:49:31:4931 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 22:49:34:4934 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:51:54:5154 [32minfo[39m: [32mNew user registered: s@gmail.com[39m
+2025-08-02 22:51:54:5154 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:52:01:521 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:52:01:521 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:52:05:525 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:52:09:529 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:52:18:5218 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:52:18:5218 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:52:21:5221 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:53:34:5334 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:53:40:5340 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:53:41:5341 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:53:51:5351 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:53:51:5351 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:53:51:5351 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:53:52:5352 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 22:53:52:5352 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:53:53:5353 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 3 items[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:53:54:5354 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 3 items[39m
+2025-08-02 22:54:03:543 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:54:04:544 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:54:10:5410 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:54:10:5410 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:54:10:5410 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:54:10:5410 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:54:10:5410 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:54:24:5424 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:54:24:5424 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:54:24:5424 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:54:25:5425 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:54:25:5425 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:54:36:5436 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:54:36:5436 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:54:36:5436 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:54:37:5437 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:54:37:5437 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:54:46:5446 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:54:46:5446 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:54:52:5452 [32minfo[39m: [32mUser logged out: s@gmail.com[39m
+2025-08-02 22:55:01:551 [32minfo[39m: [32mUser logged in: s@gmail.com[39m
+2025-08-02 22:55:01:551 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:55:10:5510 [32minfo[39m: [32mUser logged out: s@gmail.com[39m
+2025-08-02 22:55:20:5520 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:55:21:5521 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-02 22:55:25:5525 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 22:55:34:5534 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 22:56:18:5618 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:56:18:5618 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:56:18:5618 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:56:19:5619 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 22:56:19:5619 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:56:40:5640 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:56:40:5640 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:56:40:5640 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:56:41:5641 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 22:56:41:5641 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:56:50:5650 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:56:50:5650 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:56:50:5650 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:56:51:5651 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:56:51:5651 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:57:01:571 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 22:57:01:571 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 22:57:01:571 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 22:57:01:571 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 22:57:02:572 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 22:57:02:572 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 22:57:50:5750 [32minfo[39m: [32mUser logged in: s@gmail.com[39m
+2025-08-02 22:57:53:5753 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:57:54:5754 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:58:05:585 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:05:585 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 3 items[39m
+2025-08-02 22:58:05:585 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:05:585 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:05:585 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:05:585 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 3 items[39m
+2025-08-02 22:58:31:5831 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 3 items[39m
+2025-08-02 22:58:31:5831 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:31:5831 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:31:5831 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 3 items[39m
+2025-08-02 22:58:31:5831 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:31:5831 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 22:58:32:5832 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 22:58:32:5832 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 23:04:02:42 [32minfo[39m: [32mVote cast successfully: Poll 688e481e21a666aa5fd9f216, Option option_1754155038892_1, User 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 23:04:02:42 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 23:04:03:43 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688e4931b0cb7ce539b0e28d[39m
+2025-08-02 23:04:11:411 [32minfo[39m: [32mUser logged out: s@gmail.com[39m
+2025-08-02 23:04:17:417 [32minfo[39m: [32mUser logged in: s@gmail.com[39m
+2025-08-02 23:04:17:417 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-02 23:04:21:421 [32minfo[39m: [32mUser logged out: s@gmail.com[39m
+2025-08-02 23:05:34:534 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:05:34:534 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:05:34:534 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:05:35:535 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 23:05:35:535 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:06:33:633 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in created poll: g[39m
+2025-08-02 23:06:35:635 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in activated poll: g[39m
+2025-08-02 23:06:49:649 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-02 23:07:08:78 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 23:07:12:712 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:07:12:712 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:07:18:718 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:25:725 [32minfo[39m: [32mVote cast successfully: Poll 688e4ca104b20ebb199fa5db, Option option_1754156193721_1, User 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:25:725 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:07:26:726 [32minfo[39m: [32mPoll results retrieved for poll 688e4ca104b20ebb199fa5db by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:29:729 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:29:729 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:07:29:729 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:29:729 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:29:729 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:07:29:729 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:07:33:733 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 23:26:56:2656 [33mwarn[39m: [33mEmail configuration not found. Email notifications will be disabled.[39m
+2025-08-02 23:26:56:2656 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:26:56:2656 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:26:56:2656 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:26:57:2657 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 23:26:57:2657 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:27:40:2740 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-02 23:27:43:2743 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:27:43:2743 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:27:45:2745 [32minfo[39m: [32mPoll results retrieved for poll 688e4ca104b20ebb199fa5db by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:27:46:2746 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:27:51:2751 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:27:51:2751 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:27:51:2751 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:27:52:2752 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:27:52:2752 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:27:52:2752 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:27:52:2752 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:27:52:2752 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:27:52:2752 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:09:289 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:16:2816 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:17:2817 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:19:2819 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:19:2819 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:19:2819 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:23:2823 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:23:2823 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:24:2824 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:24:2824 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:27:2827 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:37:2837 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:28:37:2837 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:28:37:2837 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:28:37:2837 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:28:37:2837 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:28:37:2837 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:28:38:2838 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:39:2839 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:40:2840 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:28:40:2840 [33mwarn[39m: [33mEmail service not configured. Skipping email send.[39m
+2025-08-02 23:29:56:2956 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:29:56:2956 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:29:56:2956 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:29:56:2956 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:29:57:2957 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 23:29:57:2957 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:30:08:308 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:30:08:308 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:30:08:308 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:30:08:308 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:30:09:309 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 23:30:09:309 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:30:20:3020 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:30:20:3020 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:30:20:3020 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:30:20:3020 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:30:21:3021 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 23:30:21:3021 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:36:23:3623 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:36:23:3623 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:36:23:3623 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:36:23:3623 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:36:48:3648 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:36:48:3648 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:36:48:3648 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:36:50:3650 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:36:50:3650 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:36:50:3650 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:36:50:3650 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:37:11:3711 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:37:11:3711 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:37:11:3711 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:37:14:3714 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:37:14:3714 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:37:14:3714 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:37:14:3714 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:37:18:3718 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:37:18:3718 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:37:18:3718 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:37:18:3718 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:37:20:3720 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:37:20:3720 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:37:20:3720 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:37:20:3720 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:40:44:4044 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:40:44:4044 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:40:44:4044 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:40:44:4044 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:40:46:4046 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:40:46:4046 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:40:46:4046 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:40:46:4046 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:40:46:4046 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:40:46:4046 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:40:47:4047 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:40:47:4047 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:40:47:4047 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:40:47:4047 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:40:47:4047 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:40:47:4047 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:41:39:4139 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:41:39:4139 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:41:39:4139 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:41:39:4139 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:41:40:4140 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-02 23:41:40:4140 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:42:54:4254 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:42:54:4254 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:42:54:4254 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:42:55:4255 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:42:55:4255 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:42:55:4255 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:42:55:4255 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:18:4318 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:19:4319 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:43:19:4319 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:43:19:4319 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:43:20:4320 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:43:21:4321 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-02 23:43:22:4322 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:24:4324 [32minfo[39m: [32mPoll results retrieved for poll 688e4ca104b20ebb199fa5db by user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:26:4326 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:26:4326 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:43:26:4326 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:27:4327 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:27:4327 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-02 23:43:27:4327 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-02 23:43:27:4327 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:43:27:4327 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:43:27:4327 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:43:30:4330 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:43:30:4330 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:43:30:4330 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:45:01:451 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:45:02:452 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:45:02:452 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:45:02:452 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:45:02:452 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 23:45:02:452 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:45:49:4549 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:45:49:4549 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:45:49:4549 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:45:49:4549 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:45:49:4549 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 23:45:49:4549 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:46:19:4619 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:46:19:4619 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:46:19:4619 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:46:19:4619 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:46:20:4620 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-02 23:46:20:4620 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:49:54:4954 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:49:54:4954 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:49:54:4954 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:49:55:4955 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:49:55:4955 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:49:55:4955 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:49:55:4955 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:59:13:5913 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-02 23:59:13:5913 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-02 23:59:13:5913 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-02 23:59:13:5913 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-02 23:59:13:5913 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-02 23:59:13:5913 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-02 23:59:26:5926 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:59:26:5926 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:59:26:5926 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:59:26:5926 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:59:28:5928 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:59:28:5928 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:59:28:5928 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-02 23:59:30:5930 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-02 23:59:30:5930 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-02 23:59:30:5930 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-02 23:59:30:5930 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:00:08:08 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:00:08:08 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:00:08:08 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:00:08:08 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:00:09:09 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:00:09:09 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:00:10:010 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:00:22:022 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:00:26:026 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:00:29:029 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:00:35:035 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:00:35:035 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:00:35:035 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:03:02:32 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:03:02:32 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:03:02:32 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:03:02:32 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:03:03:33 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:03:03:33 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:03:04:34 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:03:04:34 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:03:07:37 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:08:38 [32minfo[39m: [32mPoll results retrieved for poll 688e4ca104b20ebb199fa5db by user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:03:12:312 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:03:13:313 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:03:13:313 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:03:15:315 [32minfo[39m: [32mPoll results retrieved for poll 688e4ca104b20ebb199fa5db by user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:18:318 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:03:27:327 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:04:41:441 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:04:41:441 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:04:41:441 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:04:41:441 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:04:42:442 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:04:42:442 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:04:47:447 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:04:47:447 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:04:47:447 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:04:47:447 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:04:48:448 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:04:48:448 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:05:03:53 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:05:03:53 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:05:04:54 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:05:04:54 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:05:06:56 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:05:11:511 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/notifications.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/notificationController"' has no exported member 'triggerAutomaticEmailCheck'.[39m
+
+[31m[7m7[0m   triggerAutomaticEmailCheck[39m
+[31m[7m [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-03 00:05:23:523 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/notifications.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/notificationController"' has no exported member 'triggerAutomaticEmailCheck'.[39m
+
+[31m[7m7[0m   triggerAutomaticEmailCheck[39m
+[31m[7m [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-03 00:05:39:539 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:05:39:539 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:05:39:539 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:05:39:539 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:05:39:539 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:05:39:539 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:05:39:539 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:05:40:540 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:05:40:540 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:05:47:547 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:05:47:547 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:06:08:68 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:06:08:68 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:06:08:68 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:06:08:68 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:06:08:68 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-03 00:06:09:69 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:06:09:69 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:06:10:610 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:06:10:610 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:06:11:611 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:06:34:634 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:06:34:634 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:06:34:634 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:06:35:635 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:06:35:635 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:06:35:635 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:06:35:635 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:06:45:645 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:06:45:645 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:06:45:645 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:06:45:645 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:06:51:651 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:06:51:651 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:06:51:651 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:06:51:651 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:07:25:725 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:07:25:725 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:08:25:825 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:26:826 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:43:843 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:43:843 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:43:843 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:43:843 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:44:844 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:44:844 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:44:844 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:46:846 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:47:847 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:08:48:848 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:08:48:848 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:08:48:848 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:08:48:848 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:14:07:147 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:14:07:147 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:14:07:147 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:14:07:147 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:14:07:147 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:14:07:147 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:14:07:147 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:14:08:148 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:14:08:148 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:14:37:1437 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:14:37:1437 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:15:27:1527 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:15:27:1527 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:15:28:1528 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:15:28:1528 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:15:31:1531 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:15:34:1534 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:15:34:1534 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:15:34:1534 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:15:34:1534 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:01:161 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:01:161 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:01:161 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:16:12:1612 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:16:12:1612 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:16:13:1613 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:16:13:1613 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:16:19:1619 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:19:1619 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:19:1619 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:21:1621 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:22:1622 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:22:1622 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:22:1622 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:25:1625 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:26:1626 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:16:26:1626 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:16:27:1627 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:16:27:1627 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:29:1629 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:32:1632 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:16:35:1635 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:16:35:1635 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:16:35:1635 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:35:1635 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:16:38:1638 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:38:1638 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:38:1638 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:16:40:1640 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:16:40:1640 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:16:40:1640 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:16:40:1640 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:17:18:1718 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:17:18:1718 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:17:18:1718 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:17:18:1718 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:17:18:1718 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:17:18:1718 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-03 00:17:19:1719 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:17:19:1719 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:17:48:1748 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:17:48:1748 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:17:48:1748 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:18:20:1820 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:18:20:1820 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:18:20:1820 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:18:21:1821 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:18:21:1821 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:18:21:1821 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:18:21:1821 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:18:25:1825 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:18:25:1825 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:18:26:1826 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:18:27:1827 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 2 polls[39m
+2025-08-03 00:18:27:1827 [32minfo[39m: [32mPoll results retrieved for poll 688e4ca104b20ebb199fa5db by user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:18:29:1829 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:18:30:1830 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:18:49:1849 [32minfo[39m: [32mAdmin admin@rajalakshmi.edu.in deleted poll: g[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:19:32:1932 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:19:32:1932 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:19:42:1942 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-03 00:19:47:1947 [32minfo[39m: [32mUser logged in: s@gmail.com[39m
+2025-08-03 00:19:49:1949 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-03 00:19:50:1950 [32minfo[39m: [32mActive polls retrieved for user 688e4931b0cb7ce539b0e28d: 1 polls[39m
+2025-08-03 00:19:52:1952 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688e4931b0cb7ce539b0e28d[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 2 items[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mSmart suggestions generated for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mSchedule retrieved for user 688e4931b0cb7ce539b0e28d: 2 items[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mSchedule analytics retrieved for user 688e4931b0cb7ce539b0e28d[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:19:54:1954 [32minfo[39m: [32mDeadline alert email sent to user 688e4931b0cb7ce539b0e28d (s@gmail.com)[39m
+2025-08-03 00:19:58:1958 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:19:58:1958 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:19:58:1958 [32minfo[39m: [32mDeadline alert email sent to user 688e4931b0cb7ce539b0e28d (s@gmail.com)[39m
+2025-08-03 00:19:59:1959 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:19:59:1959 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:19:59:1959 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:19:59:1959 [32minfo[39m: [32mTest email sent successfully to user 688e4931b0cb7ce539b0e28d (s@gmail.com)[39m
+2025-08-03 00:20:00:200 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:20:00:200 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:20:00:200 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:20:00:200 [32minfo[39m: [32mTest email sent successfully to user 688e4931b0cb7ce539b0e28d (s@gmail.com)[39m
+2025-08-03 00:20:02:202 [32minfo[39m: [32mUser logged out: s@gmail.com[39m
+2025-08-03 00:20:06:206 [32minfo[39m: [32mUser logged in: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:20:06:206 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:20:06:206 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:20:06:206 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:20:08:208 [32minfo[39m: [32m📧 [MOCK MODE] Email service in mock mode - would verify connection[39m
+2025-08-03 00:20:08:208 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:20:08:208 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:20:08:208 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:20:51:2051 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:20:51:2051 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:20:51:2051 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:20:51:2051 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:20:51:2051 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:20:51:2051 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-03 00:20:56:2056 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:20:56:2056 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:22:07:227 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:22:07:227 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:22:07:227 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:23:26:2326 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:23:26:2326 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:23:27:2327 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:23:27:2327 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:23:44:2344 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:23:52:2352 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:23:52:2352 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:23:53:2353 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:23:53:2353 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:23:53:2353 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:23:53:2353 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:23:53:2353 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:23:53:2353 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:23:55:2355 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:23:55:2355 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:24:19:2419 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:24:19:2419 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:24:20:2420 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:24:20:2420 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:24:38:2438 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:24:38:2438 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:25:03:253 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:25:03:253 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:25:04:254 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:25:04:254 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:25:23:2523 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:25:23:2523 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:25:24:2524 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:25:24:2524 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m📧 Email config check: User=undefined, Password=[NOT SET], Service=gmail[39m
+2025-08-03 00:26:10:2610 [33mwarn[39m: [33mEmail configuration not found or using example values. Email notifications will use mock mode.[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:26:10:2610 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:26:11:2611 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:26:11:2611 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:26:37:2637 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:26:37:2637 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:26:37:2637 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:26:37:2637 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:26:37:2637 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:26:37:2637 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 3 items[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32m📧 [MOCK EMAIL] Would send email:[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32m📧 [MOCK EMAIL] Email content preview:[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:26:38:2638 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:26:50:2650 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:26:51:2651 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:26:51:2651 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:26:59:2659 [32minfo[39m: [32mEmail service connection verified[39m
+2025-08-03 00:26:59:2659 [32minfo[39m: [32mEmail service connection verified[39m
+2025-08-03 00:26:59:2659 [32minfo[39m: [32mEmail service connection verified[39m
+2025-08-03 00:26:59:2659 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:26:59:2659 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:27:00:270 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:27:00:270 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:27:01:271 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:27:01:271 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:27:02:272 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:27:02:272 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:27:02:272 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:27:02:272 [32minfo[39m: [32mTest email sent successfully to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:27:33:2733 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:27:34:2734 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:27:34:2734 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:28:02:282 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:28:02:282 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:28:03:283 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mActive polls retrieved for user 688a72e1983825f8c8ac77df: 1 polls[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mSmart suggestions generated for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mSchedule analytics retrieved for user 688a72e1983825f8c8ac77df[39m
+2025-08-03 00:28:09:289 [32minfo[39m: [32mSchedule retrieved for user 688a72e1983825f8c8ac77df: 2 items[39m
+2025-08-03 00:28:13:2813 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:28:13:2813 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:29:32:2932 [32minfo[39m: [32mEmail sent successfully to 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:29:32:2932 [32minfo[39m: [32mDeadline alert email sent to user 688a72e1983825f8c8ac77df (221501044@rajalakshmi.edu.in)[39m
+2025-08-03 00:30:36:3036 [32minfo[39m: [32mUser logged out: 221501044@rajalakshmi.edu.in[39m
+2025-08-03 00:31:13:3113 [32minfo[39m: [32mNew user registered: hegavasanth@gmail.com[39m
+2025-08-03 00:31:13:3113 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:31:13:3113 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:31:13:3113 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:31:21:3121 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:31:21:3121 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:31:22:3122 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:31:22:3122 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:31:22:3122 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:31:22:3122 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:31:22:3122 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:31:22:3122 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:31:26:3126 [32minfo[39m: [32mEmail sent successfully to hegavasanth@gmail.com[39m
+2025-08-03 00:31:26:3126 [32minfo[39m: [32mDeadline alert email sent to user 688e6079d18e5565c99ec847 (hegavasanth@gmail.com)[39m
+2025-08-03 00:31:31:3131 [32minfo[39m: [32mUser logged out: hegavasanth@gmail.com[39m
+2025-08-03 00:32:18:3218 [32minfo[39m: [32mUser logged in: hegavasanth@gmail.com[39m
+2025-08-03 00:32:19:3219 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:32:19:3219 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:32:19:3219 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:32:19:3219 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:32:19:3219 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:32:19:3219 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:32:23:3223 [32minfo[39m: [32mEmail sent successfully to hegavasanth@gmail.com[39m
+2025-08-03 00:32:23:3223 [32minfo[39m: [32mDeadline alert email sent to user 688e6079d18e5565c99ec847 (hegavasanth@gmail.com)[39m
+2025-08-03 00:32:33:3233 [32minfo[39m: [32mEmail sent successfully to hegavasanth@gmail.com[39m
+2025-08-03 00:32:33:3233 [32minfo[39m: [32mDeadline alert email sent to user 688e6079d18e5565c99ec847 (hegavasanth@gmail.com)[39m
+2025-08-03 00:32:35:3235 [32minfo[39m: [32mEmail sent successfully to hegavasanth@gmail.com[39m
+2025-08-03 00:32:35:3235 [32minfo[39m: [32mDeadline alert email sent to user 688e6079d18e5565c99ec847 (hegavasanth@gmail.com)[39m
+2025-08-03 00:35:47:3547 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:35:47:3547 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:35:51:3551 [32minfo[39m: [32mVote cast successfully: Poll 688e481e21a666aa5fd9f216, Option option_1754155038892_2, User 688e6079d18e5565c99ec847[39m
+2025-08-03 00:35:51:3551 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:35:51:3551 [32minfo[39m: [32mPoll results retrieved for poll 688e481e21a666aa5fd9f216 by user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:35:54:3554 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:35:54:3554 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:35:54:3554 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:35:54:3554 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:35:54:3554 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:35:54:3554 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:35:57:3557 [32minfo[39m: [32mEmail sent successfully to hegavasanth@gmail.com[39m
+2025-08-03 00:35:57:3557 [32minfo[39m: [32mDeadline alert email sent to user 688e6079d18e5565c99ec847 (hegavasanth@gmail.com)[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-03 00:36:35:3635 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:36:47:3647 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m142[0m:[93m13[0m - [91merror[0m[90m TS2339: [0mProperty 'schedules' does not exist on type 'typeof import("C:/Users/HegaVasanthan/Desktop/uni/uni/backend/src/controllers/scheduleController")'.[39m
+
+[31m[7m142[0m     const { schedules } = await import('../controllers/scheduleController');[39m
+[31m[7m   [0m [91m            ~~~~~~~~~[0m[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m29[0m - [91merror[0m[90m TS7006: [0mParameter 'item' implicitly has an 'any' type.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m                            ~~~~[0m[39m
+[31m[39m
+2025-08-03 00:36:54:3654 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:05:375 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:14:3714 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:34:3734 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:53:3753 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:38:17:3817 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:38:29:3829 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:38:30:3830 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:38:30:3830 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:38:44:3844 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:38:45:3845 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:38:45:3845 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-01.jdhu8rq.mongodb.net[39m
+2025-08-03 00:38:53:3853 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:41:12:4112 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:41:12:4112 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:41:12:4112 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:41:12:4112 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:41:12:4112 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:41:13:4113 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:41:13:4113 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:41:13:4113 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:41:13:4113 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:41:13:4113 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-03 00:43:21:4321 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:43:21:4321 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:43:21:4321 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 0 items[39m
+2025-08-03 00:43:21:4321 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:21:4321 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:22:4322 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 0 items[39m
+2025-08-03 00:43:22:4322 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:22:4322 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:23:4323 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:23:4323 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:23:4323 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 0 items[39m
+2025-08-03 00:43:23:4323 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:23:4323 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:23:4323 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 0 items[39m
+2025-08-03 00:43:35:4335 [32minfo[39m: [32mStudy session created: study_1754162015078_ljmg1j0c0 by user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:35:4335 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 1 items[39m
+2025-08-03 00:43:43:4343 [32minfo[39m: [32mStudy session created: study_1754162023554_qkxq6jki4 by user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:43:43:4343 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:44:00:440 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:44:00:440 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:44:01:441 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:44:02:442 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:44:03:443 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:44:03:443 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:03:443 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:03:443 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:03:443 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:03:443 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:44:29:4429 [32minfo[39m: [32mSchedule item created: sch_1754162069345_o2fd9ybow by user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:29:4429 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:44:47:4447 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:44:47:4447 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 1 polls[39m
+2025-08-03 00:44:48:4448 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:44:48:4448 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:48:4448 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:48:4448 [32minfo[39m: [32mSmart suggestions generated for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:44:48:4448 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 2 items[39m
+2025-08-03 00:44:48:4448 [32minfo[39m: [32mSchedule analytics retrieved for user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:45:30:4530 [32minfo[39m: [32mSchedule item created: sch_1754162130223_hky38pvqp by user 688e6079d18e5565c99ec847[39m
+2025-08-03 00:45:30:4530 [32minfo[39m: [32mSchedule retrieved for user 688e6079d18e5565c99ec847: 3 items[39m
+2025-08-03 00:45:33:4533 [32minfo[39m: [32mEmail sent successfully to hegavasanth@gmail.com[39m
+2025-08-03 00:45:33:4533 [32minfo[39m: [32mDeadline alert email sent to user 688e6079d18e5565c99ec847 (hegavasanth@gmail.com)[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m🚀 Unimate.AI Backend server running on port 5000[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m📊 Health check: http://localhost:5000/api/health[39m
+2025-08-03 00:46:37:4637 [32minfo[39m: [32m🌍 Environment: development[39m
+2025-08-03 00:46:38:4638 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-03 00:46:38:4638 [32minfo[39m: [32m📊 Database: unimate-ai[39m

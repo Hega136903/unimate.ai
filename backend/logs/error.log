@@ -1,0 +1,367 @@
+2025-08-01 23:47:37:4737 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:49:02:492 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:50:34:5034 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:51:46:5146 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-01 23:51:54:5154 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-01 23:51:57:5157 [31merror[39m: [31mLogin error: secretOrPrivateKey must have a value[39m
+2025-08-02 19:18:01:181 [31merror[39m: [31mError deleting poll: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Poll"[39m
+2025-08-02 19:18:04:184 [31merror[39m: [31mError deleting poll: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Poll"[39m
+2025-08-02 19:21:38:2138 [31merror[39m: [31mError deleting poll: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Poll"[39m
+2025-08-02 19:32:01:321 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m69[0m:[93m28[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m69[0m       const userHasVoted = votes.some(vote =>[39m
+[31m[7m  [0m [91m                           ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m69[0m:[93m39[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m69[0m       const userHasVoted = votes.some(vote =>[39m
+[31m[7m  [0m [91m                                      ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m126[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m126[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m126[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m126[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m195[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m195[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m195[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m195[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m216[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Vote' refers to a value, but is being used as a type here. Did you mean 'typeof Vote'?[39m
+
+[31m[7m216[0m     const newVote: Vote = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m226[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m226[0m     votes.push(newVote);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m297[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m297[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m297[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m297[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m359[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m359[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m379[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m379[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:16:3216 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m129[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m129[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m129[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m129[0m     const userHasVoted = votes.some(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m198[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m198[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m198[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m198[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m219[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Vote' refers to a value, but is being used as a type here. Did you mean 'typeof Vote'?[39m
+
+[31m[7m219[0m     const newVote: Vote = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m229[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m229[0m     votes.push(newVote);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m300[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m300[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m300[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m300[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m362[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m362[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m382[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m382[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:23:3223 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m201[0m:[93m26[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m201[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                         ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m201[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m201[0m     const existingVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                    ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m222[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Vote' refers to a value, but is being used as a type here. Did you mean 'typeof Vote'?[39m
+
+[31m[7m222[0m     const newVote: Vote = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m232[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m232[0m     votes.push(newVote);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m303[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m303[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m303[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m303[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m365[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m365[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m385[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m385[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:36:3236 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m364[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m364[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m384[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m384[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:44:3244 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m257[0m:[93m17[0m - [91merror[0m[90m TS18046: [0m'newVote._id' is of type 'unknown'.[39m
+
+[31m[7m257[0m         voteId: newVote._id.toString(),[39m
+[31m[7m   [0m [91m                ~~~~~~~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m364[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m364[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m384[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m384[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:32:52:3252 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m22[0m - [91merror[0m[90m TS2552: [0mCannot find name 'votes'. Did you mean 'Vote'?[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                     ~~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m302[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'vote' implicitly has an 'any' type.[39m
+
+[31m[7m302[0m     const userVote = votes.find(vote =>[39m
+[31m[7m   [0m [91m                                ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m364[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m364[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m384[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m384[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:33:09:339 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m365[0m:[93m20[0m - [91merror[0m[90m TS2749: [0m'Poll' refers to a value, but is being used as a type here. Did you mean 'typeof Poll'?[39m
+
+[31m[7m365[0m     const newPoll: Poll = {[39m
+[31m[7m   [0m [91m                   ~~~~[0m[39m
+[31m[96msrc/controllers/votingController.ts[0m:[93m385[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'polls'. Did you mean 'Poll'?[39m
+
+[31m[7m385[0m     polls.push(newPoll);[39m
+[31m[7m   [0m [91m    ~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:33:28:3328 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 19:34:20:3420 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:51:29:5129 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:51:33:5133 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/votingController"' has no exported member 'createPoll'.[39m
+
+[31m[7m8[0m   createPoll[39m
+[31m[7m [0m [91m  ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 21:53:23:5323 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/voting.ts[0m:[93m28[0m:[93m23[0m - [91merror[0m[90m TS2304: [0mCannot find name 'createPoll'.[39m
+
+[31m[7m28[0m router.post('/polls', createPoll);[39m
+[31m[7m  [0m [91m                      ~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-02 22:01:28:128 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m104[0m:[93m46[0m - [91merror[0m[90m TS7006: [0mParameter 'o' implicitly has an 'any' type.[39m
+
+[31m[7m104[0m           options: pollWithVotes.options.map(o => ({[39m
+[31m[7m   [0m [91m                                             ~[0m[39m
+[31m[39m
+2025-08-02 22:02:42:242 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m104[0m:[93m46[0m - [91merror[0m[90m TS7006: [0mParameter 'o' implicitly has an 'any' type.[39m
+
+[31m[7m104[0m           options: pollWithVotes.options.map(o => ({[39m
+[31m[7m   [0m [91m                                             ~[0m[39m
+[31m[39m
+2025-08-02 22:08:08:88 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-02 22:09:00:90 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-02 22:34:57:3457 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-02 22:36:42:3642 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m101[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'ov' implicitly has an 'any' type.[39m
+
+[31m[7m101[0m               options: optionVotes.map(ov => ({[39m
+[31m[7m   [0m [91m                                       ~~[0m[39m
+[31m[39m
+2025-08-02 22:37:55:3755 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m101[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'ov' implicitly has an 'any' type.[39m
+
+[31m[7m101[0m               options: optionVotes.map(ov => ({[39m
+[31m[7m   [0m [91m                                       ~~[0m[39m
+[31m[39m
+2025-08-02 22:38:27:3827 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/admin.ts[0m:[93m101[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'ov' implicitly has an 'any' type.[39m
+
+[31m[7m101[0m               options: optionVotes.map(ov => ({[39m
+[31m[7m   [0m [91m                                       ~~[0m[39m
+[31m[39m
+2025-08-02 22:52:05:525 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:52:09:529 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:52:21:5221 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-02 22:53:34:5334 [31merror[39m: [31mCast vote error: E11000 duplicate key error collection: unimate-ai.votes index: unique_user_vote dup key: { pollId: ObjectId('688e481e21a666aa5fd9f216'), userId: null }[39m
+2025-08-03 00:05:11:511 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/notifications.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/notificationController"' has no exported member 'triggerAutomaticEmailCheck'.[39m
+
+[31m[7m7[0m   triggerAutomaticEmailCheck[39m
+[31m[7m [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-03 00:05:23:523 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/routes/notifications.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2305: [0mModule '"../controllers/notificationController"' has no exported member 'triggerAutomaticEmailCheck'.[39m
+
+[31m[7m7[0m   triggerAutomaticEmailCheck[39m
+[31m[7m [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m
+[31m[39m
+2025-08-03 00:06:08:68 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-03 00:17:18:1718 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-03 00:20:51:2051 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-03 00:36:47:3647 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m142[0m:[93m13[0m - [91merror[0m[90m TS2339: [0mProperty 'schedules' does not exist on type 'typeof import("C:/Users/HegaVasanthan/Desktop/uni/uni/backend/src/controllers/scheduleController")'.[39m
+
+[31m[7m142[0m     const { schedules } = await import('../controllers/scheduleController');[39m
+[31m[7m   [0m [91m            ~~~~~~~~~[0m[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m29[0m - [91merror[0m[90m TS7006: [0mParameter 'item' implicitly has an 'any' type.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m                            ~~~~[0m[39m
+[31m[39m
+2025-08-03 00:36:54:3654 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:05:375 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:14:3714 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:34:3734 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:37:53:3753 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m
+2025-08-03 00:38:17:3817 [31merror[39m: [31mUncaught Exception: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/services/scheduleEmailService.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS2719: [0mType 'ScheduleItem[]' is not assignable to type 'ScheduleItem[]'. Two different types with this name exist, but they are unrelated.[39m
+[31m  Property '_id' is missing in type 'ScheduleItem' but required in type 'ScheduleItem'.[39m
+
+[31m[7m143[0m     return schedules.filter(item => item.createdBy === userId);[39m
+[31m[7m   [0m [91m    ~~~~~~[0m[39m
+
+[31m  [96msrc/services/scheduleEmailService.ts[0m:[93m7[0m:[93m3[0m[39m
+[31m    [7m7[0m   _id: string;[39m
+[31m    [7m [0m [96m  ~~~[0m[39m
+[31m    '_id' is declared here.[39m
+[31m[39m

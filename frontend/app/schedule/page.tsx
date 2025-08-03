@@ -5,6 +5,9 @@ import SmartScheduleManager from '../components/SmartScheduleManager';
 import LoginModal from '../components/LoginModal';
 import { useState } from 'react';
 
+// Disable static generation for this page as it requires authentication
+export const dynamic = 'force-dynamic';
+
 export default function SchedulePage() {
   const { user } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);

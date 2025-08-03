@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../lib/api';
 
 interface AdminStats {
   totalPolls: number;
@@ -32,7 +33,6 @@ interface Poll {
 
 const AdminPanel: React.FC = () => {
   const { user, isLoggedIn } = useAuth();
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://unimate-ai.onrender.com/api';
   const [activeTab, setActiveTab] = useState<'dashboard' | 'polls' | 'create' | 'analytics'>('dashboard');
   const [stats, setStats] = useState<AdminStats>({
     totalPolls: 0,
@@ -829,4 +829,3 @@ const AdminPanel: React.FC = () => {
 };
 
 export default AdminPanel;
-

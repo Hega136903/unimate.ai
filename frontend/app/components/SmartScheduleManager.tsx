@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../lib/api';
 
 interface ScheduleItem {
   id: string;
@@ -170,7 +171,7 @@ const SmartScheduleManager: React.FC = () => {
         endDate.setMonth(endDate.getMonth() + 1, 0);
       }
 
-      const response = await fetch(`http://localhost:5000/api/schedule?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`, {
+      const response = await fetch(`${API_BASE_URL}/schedule?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -193,7 +194,7 @@ const SmartScheduleManager: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/schedule/suggestions', {
+      const response = await fetch(`${API_BASE_URL}/schedule/suggestions`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -214,7 +215,7 @@ const SmartScheduleManager: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/schedule/analytics', {
+      const response = await fetch(`${API_BASE_URL}/schedule/analytics`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -235,7 +236,7 @@ const SmartScheduleManager: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/schedule/items', {
+      const response = await fetch(`${API_BASE_URL}/schedule/items`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -274,7 +275,7 @@ const SmartScheduleManager: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/schedule/study-sessions', {
+      const response = await fetch(`${API_BASE_URL}/schedule/study-sessions`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -309,7 +310,7 @@ const SmartScheduleManager: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/notifications/deadline-alerts', {
+      const response = await fetch(`${API_BASE_URL}/notifications/deadline-alerts`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -332,7 +333,7 @@ const SmartScheduleManager: React.FC = () => {
     if (!token) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/notifications/test-email', {
+      const response = await fetch(`${API_BASE_URL}/notifications/test-email`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

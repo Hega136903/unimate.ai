@@ -199,10 +199,10 @@ class EmailService {
             ` : ''}
 
             <div style="text-align: center; margin: 30px 0;">
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}/schedule" class="btn">
+                <a href="${process.env.FRONTEND_URL || 'https://unimate-ai-37d2.vercel.app'}/schedule" class="btn">
                     📅 View Full Schedule
                 </a>
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}" class="btn">
+                <a href="${process.env.FRONTEND_URL || 'https://unimate-ai-37d2.vercel.app'}" class="btn">
                     🎓 Open Unimate.AI
                 </a>
             </div>

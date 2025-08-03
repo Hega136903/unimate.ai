@@ -54,7 +54,7 @@ app.use(helmet()); // Security headers
 app.use(compression()); // Compress responses
 app.use(limiter); // Apply rate limiting
 app.use(cors({
-  origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'http://localhost:3003'],
+  origin: process.env.CORS_ORIGIN?.split(',') || ['https://unimate-ai-37d2.vercel.app'],
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -117,7 +117,7 @@ app.use('*', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   logger.info(`🚀 Unimate.AI Backend server running on port ${PORT}`);
-  logger.info(`📊 Health check: http://localhost:${PORT}/api/health`);
+  logger.info(`📊 Health check: https://unimate-ai.onrender.com/api/health`);
   logger.info(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 

@@ -263,7 +263,7 @@ class ScheduleEmailService {
                 ` : ''}
 
                 <div style="text-align: center; margin-top: 30px;">
-                    <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}" 
+                    <a href="${process.env.FRONTEND_URL || 'https://unimate-ai-37d2.vercel.app'}" 
                        style="background: #667eea; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
                        📅 Open Unimate.AI
                     </a>

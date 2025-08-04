@@ -247,6 +247,28 @@ const VotingSystem: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
       <div className="max-w-6xl mx-auto">
+        {/* Debug Panel - Only show in development */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <h3 className="font-bold text-yellow-800 mb-2">🔍 Voting System Debug</h3>
+            <div className="text-sm text-yellow-700 space-y-1">
+              <div>User ID: {user?.id || 'Not logged in'}</div>
+              <div>User Role: {user?.role || 'N/A'}</div>
+              <div>API Base URL: {API_BASE_URL}</div>
+              <div>Polls Loaded: {polls.length}</div>
+              <div>Loading State: {loading ? 'Yes' : 'No'}</div>
+              <div>Auth Token: {getAuthToken() ? 'Present' : 'Missing'}</div>
+              <div>Current Time: {new Date().toISOString()}</div>
+              <button 
+                onClick={fetchActivePolls}
+                className="mt-2 px-3 py-1 bg-yellow-200 text-yellow-800 rounded text-xs hover:bg-yellow-300"
+              >
+                🔄 Refresh Polls
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Notification */}
         {notification && (
           <div className={`mb-6 p-4 rounded-lg ${

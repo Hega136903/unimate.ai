@@ -26,6 +26,8 @@ interface Poll {
   totalVotes: number;
   userHasVoted?: boolean;
   timeRemaining?: number;
+  timeUntilStart?: number;
+  pollStatus?: 'scheduled' | 'active' | 'ended';
   canVote?: boolean;
   userSelection?: string;
 }
@@ -205,6 +207,18 @@ const VotingSystem: React.FC = () => {
     return `${minutes} minutes remaining`;
   };
 
+  const formatTimeUntilStart = (milliseconds: number) => {
+    if (milliseconds <= 0) return 'Starting now';
+    
+    const days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((milliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+
+    if (days > 0) return `Starts in ${days} days, ${hours} hours`;
+    if (hours > 0) return `Starts in ${hours} hours, ${minutes} minutes`;
+    return `Starts in ${minutes} minutes`;
+  };
+
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'student-election': return '🗳️';
@@ -296,6 +310,16 @@ const VotingSystem: React.FC = () => {
                         ✅ Voted
                       </span>
                     )}
+                    {poll.pollStatus === 'scheduled' && (
+                      <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">
+                        🕒 Scheduled
+                      </span>
+                    )}
+                    {poll.pollStatus === 'ended' && (
+                      <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium">
+                        ⏰ Ended
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{poll.title}</h3>
                   <p className="text-gray-600 text-sm mb-3">{poll.description}</p>
@@ -305,12 +329,26 @@ const VotingSystem: React.FC = () => {
               {/* Poll Stats */}
               <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                 <span>📊 {poll.totalVotes} votes</span>
-                <span>⏰ {poll.timeRemaining && formatTimeRemaining(poll.timeRemaining)}</span>
+                <span>
+                  {poll.pollStatus === 'scheduled' && poll.timeUntilStart 
+                    ? `🕒 ${formatTimeUntilStart(poll.timeUntilStart)}`
+                    : poll.timeRemaining 
+                    ? `⏰ ${formatTimeRemaining(poll.timeRemaining)}`
+                    : '⏰ Voting closed'
+                  }
+                </span>
               </div>
 
               {/* Vote Button or Results */}
               <div className="space-y-3">
-                {!poll.userHasVoted && poll.canVote ? (
+                {poll.pollStatus === 'scheduled' ? (
+                  <button
+                    disabled
+                    className="w-full bg-yellow-100 text-yellow-800 py-3 px-4 rounded-lg font-medium cursor-not-allowed"
+                  >
+                    🕒 Voting opens {poll.timeUntilStart ? formatTimeUntilStart(poll.timeUntilStart) : 'soon'}
+                  </button>
+                ) : !poll.userHasVoted && poll.canVote ? (
                   <button
                     onClick={() => setSelectedPoll(poll)}
                     className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"

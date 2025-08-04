@@ -157,7 +157,10 @@ const SmartScheduleManager: React.FC = () => {
 
   const fetchSchedule = async () => {
     const token = getAuthToken();
-    if (!token) return;
+    if (!token) {
+      console.log('📅 No auth token found for schedule fetch');
+      return;
+    }
 
     try {
       const startDate = new Date(selectedDate);
@@ -171,19 +174,37 @@ const SmartScheduleManager: React.FC = () => {
         endDate.setMonth(endDate.getMonth() + 1, 0);
       }
 
-      const response = await fetch(`${API_BASE_URL}/schedule?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`, {
+      const url = `${API_BASE_URL}/schedule?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`;
+      console.log('📅 Fetching schedule from:', url);
+
+      const response = await fetch(url, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
 
+      console.log('📅 Schedule response status:', response.status);
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('📅 Schedule fetch error:', response.status, errorText);
+        throw new Error(`API error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('📅 Schedule data received:', data);
+      
       if (data.success) {
-        setSchedule(data.data.schedule);
+        setSchedule(data.data || []); // Backend returns data directly, not data.schedule
+        console.log('📅 Schedule items set:', data.data?.length || 0);
+      } else {
+        console.error('📅 Schedule API returned success: false', data);
+        showNotification(data.message || 'Error fetching schedule', 'error');
       }
     } catch (error) {
-      showNotification('Error fetching schedule', 'error');
+      console.error('📅 Schedule fetch error:', error);
+      showNotification(`Error fetching schedule: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     } finally {
       setLoading(false);
     }

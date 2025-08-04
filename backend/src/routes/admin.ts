@@ -218,7 +218,7 @@ router.post('/polls', [
       options: pollOptions,
       startTime: start,
       endTime: end,
-      isActive: start <= now && end > now,
+      isActive: true, // Always set to true, time-based filtering is done in queries
       isAnonymous,
       category,
       createdBy: req.user.id,

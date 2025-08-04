@@ -4,7 +4,9 @@ import {
   testEmailService, 
   getNotificationHistory,
   updateNotificationPreferences,
-  triggerAutomaticEmailCheck
+  triggerAutomaticEmailCheck,
+  getUnreadCount,
+  markAsRead
 } from '../controllers/notificationController';
 import { authenticateToken } from '../middleware/auth';
 
@@ -37,5 +39,15 @@ router.put('/preferences', updateNotificationPreferences);
 // @desc    Manually trigger automatic email check for all users
 // @access  Private
 router.post('/trigger-automatic-check', triggerAutomaticEmailCheck);
+
+// @route   GET /api/notifications/unread-count
+// @desc    Get unread notifications count for user
+// @access  Private
+router.get('/unread-count', getUnreadCount);
+
+// @route   PUT /api/notifications/mark-read
+// @desc    Mark notifications as read
+// @access  Private
+router.put('/mark-read', markAsRead);
 
 export default router;

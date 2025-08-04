@@ -1,38 +1,8 @@
 import { Request, Response } from 'express';
 import { logger } from '../utils/logger';
+import Schedule, { IScheduleItem, IScheduleModel } from '../models/Schedule';
 
 // Interfaces for schedule management
-interface ScheduleItem {
-  id: string;
-  title: string;
-  description?: string;
-  type: 'class' | 'assignment' | 'exam' | 'study-session' | 'personal' | 'meeting';
-  startTime: Date;
-  endTime: Date;
-  location?: string;
-  course?: string;
-  professor?: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'scheduled' | 'in-progress' | 'completed' | 'cancelled' | 'missed';
-  isRecurring: boolean;
-  recurrencePattern?: {
-    frequency: 'daily' | 'weekly' | 'monthly';
-    daysOfWeek?: number[]; // 0 = Sunday, 1 = Monday, etc.
-    endDate?: Date;
-  };
-  reminders: {
-    time: number; // minutes before event
-    sent: boolean;
-  }[];
-  attendees?: string[];
-  notes?: string;
-  attachments?: string[];
-  color?: string;
-  createdBy: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
 interface StudySession {
   id: string;
   subject: string;
@@ -48,164 +18,18 @@ interface StudySession {
   studentId: string;
 }
 
-interface TimeSlot {
-  start: Date;
-  end: Date;
-  available: boolean;
-  reason?: string;
+interface AuthenticatedRequest extends Request {
+  user?: {
+    id: string;
+    email: string;
+    role: string;
+  };
 }
 
-// In-memory storage (replace with database in production)
-export let schedules: ScheduleItem[] = [
-  // Sample items - these will be filtered by user
-  {
-    id: 'sch_1',
-    title: 'Data Structures & Algorithms',
-    description: 'Trees and Graph algorithms',
-    type: 'class',
-    startTime: new Date('2025-08-01T09:00:00'),
-    endTime: new Date('2025-08-01T10:30:00'),
-    location: 'Room 301, Computer Science Building',
-    course: 'CS-301',
-    professor: 'Dr. Sarah Johnson',
-    priority: 'high',
-    status: 'scheduled',
-    isRecurring: true,
-    recurrencePattern: {
-      frequency: 'weekly',
-      daysOfWeek: [1, 3, 5], // Monday, Wednesday, Friday
-      endDate: new Date('2025-12-15')
-    },
-    reminders: [
-      { time: 15, sent: false },
-      { time: 5, sent: false }
-    ],
-    color: '#3B82F6',
-    createdBy: 'sample_user', // This will be filtered out until real users create items
-    createdAt: new Date(),
-    updatedAt: new Date()
-  },
-  {
-    id: 'sch_2',
-    title: 'Machine Learning Assignment - URGENT!',
-    description: 'Implement neural network from scratch - Due in 12 hours!',
-    type: 'assignment',
-    startTime: new Date('2025-08-03T08:00:00'),
-    endTime: new Date('2025-08-03T11:59:00'), // Due tomorrow at 11:59 AM
-    course: 'ML-401',
-    professor: 'Dr. Michael Chen',
-    priority: 'urgent',
-    status: 'scheduled',
-    isRecurring: false,
-    reminders: [
-      { time: 60, sent: false },
-      { time: 30, sent: false },
-      { time: 10, sent: false }
-    ],
-    color: '#EF4444',
-    createdBy: 'sample_user', // This will be filtered out until real users create items
-    createdAt: new Date(),
-    updatedAt: new Date()
-  },
-  {
-    id: 'sch_3',
-    title: 'Database Systems Midterm',
-    description: 'Covers SQL, NoSQL, and database design',
-    type: 'exam',
-    startTime: new Date('2025-08-03T14:00:00'),
-    endTime: new Date('2025-08-03T16:00:00'), // Tomorrow afternoon
-    location: 'Exam Hall B',
-    course: 'DB-302',
-    professor: 'Dr. Emily Davis',
-    priority: 'urgent',
-    status: 'scheduled',
-    isRecurring: false,
-    reminders: [
-      { time: 1440, sent: false }, // 24 hours
-      { time: 180, sent: false },  // 3 hours
-      { time: 30, sent: false }
-    ],
-    color: '#DC2626',
-    createdBy: 'sample_user', // This will be filtered out until real users create items
-    createdAt: new Date(),
-    updatedAt: new Date()
-  },
-  {
-    id: 'sch_4',
-    title: 'React Project Submission - CRITICAL!',
-    description: 'Final project submission for Web Development course',
-    type: 'assignment',
-    startTime: new Date(),
-    endTime: new Date(Date.now() + 6 * 60 * 60 * 1000), // Due in 6 hours!
-    course: 'WEB-501',
-    professor: 'Prof. Alex Rodriguez',
-    priority: 'urgent',
-    status: 'scheduled',
-    isRecurring: false,
-    reminders: [
-      { time: 60, sent: false },
-      { time: 30, sent: false },
-      { time: 10, sent: false }
-    ],
-    color: '#DC2626',
-    createdBy: 'sample_user', // This will be filtered out until real users create items
-    createdAt: new Date(),
-    updatedAt: new Date()
-  }
-];
-
-// Helper function to initialize a new user with sample schedule items
-export const initializeUserSchedule = (userId: string) => {
-  const sampleItems: ScheduleItem[] = [
-    {
-      id: `sch_${userId}_welcome_1`,
-      title: '🎉 Welcome to Unimate.AI!',
-      description: 'Complete your profile setup and explore features',
-      type: 'personal',
-      startTime: new Date(),
-      endTime: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
-      priority: 'medium',
-      status: 'scheduled',
-      isRecurring: false,
-      reminders: [{ time: 30, sent: false }],
-      color: '#10B981',
-      createdBy: userId,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },
-    {
-      id: `sch_${userId}_sample_assignment`,
-      title: 'Sample Assignment - Try Email Alerts',
-      description: 'This is a sample urgent assignment to test email notifications',
-      type: 'assignment',
-      startTime: new Date(),
-      endTime: new Date(Date.now() + 3 * 60 * 60 * 1000), // 3 hours from now
-      course: 'DEMO-101',
-      priority: 'urgent',
-      status: 'scheduled',
-      isRecurring: false,
-      reminders: [
-        { time: 60, sent: false },
-        { time: 30, sent: false }
-      ],
-      color: '#EF4444',
-      createdBy: userId,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }
-  ];
-
-  // Add sample items for the new user
-  schedules.push(...sampleItems);
-  return sampleItems;
-};
-
-let studySessions: StudySession[] = [];
-
-  // Get student schedule
-export const getStudentSchedule = async (req: Request, res: Response) => {
+// Get student schedule
+export const getStudentSchedule = async (req: AuthenticatedRequest, res: Response) => {
   try {
-    const userId = (req as any).user?.id;
+    const userId = req.user?.id;
     const { startDate, endDate, type } = req.query;
 
     if (!userId) {
@@ -215,40 +39,72 @@ export const getStudentSchedule = async (req: Request, res: Response) => {
       });
     }
 
-    // FIXED: Filter by user first - each user gets their own schedule
-    let filteredSchedule = schedules.filter(item => item.createdBy === userId);
-
-    // Filter by date range
+    console.log('📅 Getting schedule for user:', userId);
+    
+    // Build query
+    const query: any = { createdBy: userId };
+    
+    if (type && type !== 'all') {
+      query.type = type;
+    }
+    
+    // Date range filter
     if (startDate && endDate) {
       const start = new Date(startDate as string);
       const end = new Date(endDate as string);
       
-      filteredSchedule = filteredSchedule.filter(item => 
-        item.startTime >= start && item.startTime <= end
-      );
+      query.$or = [
+        {
+          startTime: {
+            $gte: start,
+            $lte: end
+          }
+        },
+        {
+          endTime: {
+            $gte: start,
+            $lte: end
+          }
+        },
+        {
+          startTime: { $lte: start },
+          endTime: { $gte: end }
+        }
+      ];
     }
 
-    // Filter by type
-    if (type && type !== 'all') {
-      filteredSchedule = filteredSchedule.filter(item => item.type === type);
-    }
+    const scheduleItems = await Schedule.find(query).sort({ startTime: 1 });
+    
+    console.log(`📅 Found ${scheduleItems.length} schedule items`);
 
-    // Sort by start time
-    filteredSchedule.sort((a, b) => a.startTime.getTime() - b.startTime.getTime());    logger.info(`Schedule retrieved for user ${userId}: ${filteredSchedule.length} items`);
+    // Transform for frontend
+    const transformedItems = scheduleItems.map(item => ({
+      id: (item._id as any).toString(),
+      title: item.title,
+      description: item.description,
+      type: item.type,
+      startTime: item.startTime.toISOString(),
+      endTime: item.endTime.toISOString(),
+      location: item.location,
+      course: item.course,
+      professor: item.professor,
+      priority: item.priority,
+      status: item.status,
+      color: item.color || '#3B82F6',
+      isRecurring: item.isRecurring,
+      recurrencePattern: item.recurrencePattern,
+      reminders: item.reminders,
+      notes: item.notes
+    }));
 
     return res.json({
       success: true,
       message: 'Schedule retrieved successfully',
-      data: {
-        schedule: filteredSchedule,
-        totalItems: filteredSchedule.length,
-        upcomingItems: filteredSchedule.filter(item => 
-          item.startTime > new Date() && item.status === 'scheduled'
-        ).length
-      }
+      data: transformedItems
     });
+
   } catch (error) {
-    logger.error('Get student schedule error:', error);
+    logger.error('Error getting student schedule:', error);
     return res.status(500).json({
       success: false,
       message: 'Failed to retrieve schedule'
@@ -257,9 +113,17 @@ export const getStudentSchedule = async (req: Request, res: Response) => {
 };
 
 // Create schedule item
-export const createScheduleItem = async (req: Request, res: Response) => {
+export const createScheduleItem = async (req: AuthenticatedRequest, res: Response) => {
   try {
-    const userId = (req as any).user?.id;
+    const userId = req.user?.id;
+    
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: 'User not authenticated'
+      });
+    }
+
     const {
       title,
       description,
@@ -269,20 +133,14 @@ export const createScheduleItem = async (req: Request, res: Response) => {
       location,
       course,
       professor,
-      priority,
-      isRecurring,
+      priority = 'medium',
+      color = '#3B82F6',
+      isRecurring = false,
       recurrencePattern,
-      reminders,
-      color
+      reminders = []
     } = req.body;
 
-    if (!userId) {
-      return res.status(401).json({
-        success: false,
-        message: 'User not authenticated'
-      });
-    }
-
+    // Validate required fields
     if (!title || !type || !startTime || !endTime) {
       return res.status(400).json({
         success: false,
@@ -290,38 +148,60 @@ export const createScheduleItem = async (req: Request, res: Response) => {
       });
     }
 
-    const newItem: ScheduleItem = {
-      id: `sch_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    // Validate dates
+    const start = new Date(startTime);
+    const end = new Date(endTime);
+    
+    if (end <= start) {
+      return res.status(400).json({
+        success: false,
+        message: 'End time must be after start time'
+      });
+    }
+
+    const scheduleItem = new Schedule({
       title,
       description,
       type,
-      startTime: new Date(startTime),
-      endTime: new Date(endTime),
+      startTime: start,
+      endTime: end,
       location,
       course,
       professor,
-      priority: priority || 'medium',
+      priority,
       status: 'scheduled',
-      isRecurring: isRecurring || false,
+      color,
+      isRecurring,
       recurrencePattern,
-      reminders: reminders || [{ time: 15, sent: false }],
-      color: color || '#3B82F6',
-      createdBy: userId,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    };
+      reminders,
+      createdBy: userId
+    });
 
-    schedules.push(newItem);
+    await scheduleItem.save();
 
-    logger.info(`Schedule item created: ${newItem.id} by user ${userId}`);
+    console.log('📅 Created schedule item:', title);
 
     return res.status(201).json({
       success: true,
       message: 'Schedule item created successfully',
-      data: newItem
+      data: {
+        id: (scheduleItem._id as any).toString(),
+        title: scheduleItem.title,
+        description: scheduleItem.description,
+        type: scheduleItem.type,
+        startTime: scheduleItem.startTime.toISOString(),
+        endTime: scheduleItem.endTime.toISOString(),
+        location: scheduleItem.location,
+        course: scheduleItem.course,
+        professor: scheduleItem.professor,
+        priority: scheduleItem.priority,
+        status: scheduleItem.status,
+        color: scheduleItem.color
+      }
     });
+
   } catch (error) {
-    logger.error('Create schedule item error:', error);
+    logger.error('Error creating schedule item:', error);
     return res.status(500).json({
       success: false,
       message: 'Failed to create schedule item'
@@ -330,12 +210,11 @@ export const createScheduleItem = async (req: Request, res: Response) => {
 };
 
 // Update schedule item
-export const updateScheduleItem = async (req: Request, res: Response) => {
+export const updateScheduleItem = async (req: AuthenticatedRequest, res: Response) => {
   try {
-    const userId = (req as any).user?.id;
+    const userId = req.user?.id;
     const { itemId } = req.params;
-    const updates = req.body;
-
+    
     if (!userId) {
       return res.status(401).json({
         success: false,
@@ -343,31 +222,65 @@ export const updateScheduleItem = async (req: Request, res: Response) => {
       });
     }
 
-    const itemIndex = schedules.findIndex(item => item.id === itemId);
-    if (itemIndex === -1) {
+    // Find the schedule item
+    const scheduleItem = await Schedule.findOne({
+      _id: itemId,
+      createdBy: userId
+    });
+
+    if (!scheduleItem) {
       return res.status(404).json({
         success: false,
         message: 'Schedule item not found'
       });
     }
 
-    const updatedItem = {
-      ...schedules[itemIndex],
-      ...updates,
-      updatedAt: new Date()
-    };
+    // Update fields
+    const updateData = { ...req.body };
+    delete updateData.createdBy; // Don't allow changing owner
 
-    schedules[itemIndex] = updatedItem;
+    // Validate dates if provided
+    if (updateData.startTime && updateData.endTime) {
+      const start = new Date(updateData.startTime);
+      const end = new Date(updateData.endTime);
+      
+      if (end <= start) {
+        return res.status(400).json({
+          success: false,
+          message: 'End time must be after start time'
+        });
+      }
+    }
 
-    logger.info(`Schedule item updated: ${itemId} by user ${userId}`);
+    const updatedItem = await Schedule.findByIdAndUpdate(
+      itemId,
+      updateData,
+      { new: true }
+    );
+
+    console.log('📅 Updated schedule item:', updatedItem?.title);
 
     return res.json({
       success: true,
       message: 'Schedule item updated successfully',
-      data: updatedItem
+      data: {
+        id: (updatedItem?._id as any)?.toString(),
+        title: updatedItem?.title,
+        description: updatedItem?.description,
+        type: updatedItem?.type,
+        startTime: updatedItem?.startTime.toISOString(),
+        endTime: updatedItem?.endTime.toISOString(),
+        location: updatedItem?.location,
+        course: updatedItem?.course,
+        professor: updatedItem?.professor,
+        priority: updatedItem?.priority,
+        status: updatedItem?.status,
+        color: updatedItem?.color
+      }
     });
+
   } catch (error) {
-    logger.error('Update schedule item error:', error);
+    logger.error('Error updating schedule item:', error);
     return res.status(500).json({
       success: false,
       message: 'Failed to update schedule item'
@@ -376,11 +289,11 @@ export const updateScheduleItem = async (req: Request, res: Response) => {
 };
 
 // Delete schedule item
-export const deleteScheduleItem = async (req: Request, res: Response) => {
+export const deleteScheduleItem = async (req: AuthenticatedRequest, res: Response) => {
   try {
-    const userId = (req as any).user?.id;
+    const userId = req.user?.id;
     const { itemId } = req.params;
-
+    
     if (!userId) {
       return res.status(401).json({
         success: false,
@@ -388,24 +301,27 @@ export const deleteScheduleItem = async (req: Request, res: Response) => {
       });
     }
 
-    const itemIndex = schedules.findIndex(item => item.id === itemId);
-    if (itemIndex === -1) {
+    const result = await Schedule.findOneAndDelete({
+      _id: itemId,
+      createdBy: userId
+    });
+
+    if (!result) {
       return res.status(404).json({
         success: false,
         message: 'Schedule item not found'
       });
     }
 
-    schedules.splice(itemIndex, 1);
-
-    logger.info(`Schedule item deleted: ${itemId} by user ${userId}`);
+    console.log('📅 Deleted schedule item:', result.title);
 
     return res.json({
       success: true,
       message: 'Schedule item deleted successfully'
     });
+
   } catch (error) {
-    logger.error('Delete schedule item error:', error);
+    logger.error('Error deleting schedule item:', error);
     return res.status(500).json({
       success: false,
       message: 'Failed to delete schedule item'
@@ -413,11 +329,12 @@ export const deleteScheduleItem = async (req: Request, res: Response) => {
   }
 };
 
-  // Get smart schedule suggestions
-export const getSmartSuggestions = async (req: Request, res: Response) => {
+// Get upcoming deadlines
+export const getUpcomingDeadlines = async (req: AuthenticatedRequest, res: Response) => {
   try {
-    const userId = (req as any).user?.id;
-
+    const userId = req.user?.id;
+    const { hours = 24 } = req.query;
+    
     if (!userId) {
       return res.status(401).json({
         success: false,
@@ -425,99 +342,91 @@ export const getSmartSuggestions = async (req: Request, res: Response) => {
       });
     }
 
-    const now = new Date();
-    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    const weekEnd = new Date(todayStart.getTime() + 7 * 24 * 60 * 60 * 1000);
-
-    // FIXED: Get user-specific schedule for suggestions
-    const userSchedule = schedules.filter(item => item.createdBy === userId);
+    const deadlines = await Schedule.getUpcomingDeadlines(userId, Number(hours));
     
-    // Get this week's schedule
-    const thisWeekSchedule = userSchedule.filter(item => 
-      item.startTime >= todayStart && item.startTime <= weekEnd
-    );    // Generate suggestions
+    const transformedDeadlines = deadlines.map((item: any) => ({
+      id: (item._id as any).toString(),
+      title: item.title,
+      description: item.description,
+      type: item.type,
+      startTime: item.startTime.toISOString(),
+      endTime: item.endTime.toISOString(),
+      course: item.course,
+      professor: item.professor,
+      priority: item.priority,
+      timeRemaining: item.endTime.getTime() - Date.now()
+    }));
+
+    return res.json({
+      success: true,
+      message: 'Upcoming deadlines retrieved successfully',
+      data: transformedDeadlines
+    });
+
+  } catch (error) {
+    logger.error('Error getting upcoming deadlines:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to retrieve deadlines'
+    });
+  }
+};
+
+// Get AI suggestions
+export const getAISuggestions = async (req: AuthenticatedRequest, res: Response) => {
+  try {
+    const userId = req.user?.id;
+    
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: 'User not authenticated'
+      });
+    }
+
+    // Get user's schedule for analysis
+    const scheduleItems = await Schedule.find({ createdBy: userId }).sort({ startTime: 1 });
+    
+    // Generate basic suggestions
     const suggestions = {
       studyRecommendations: [
         {
-          subject: 'Database Systems',
-          reason: 'Midterm exam in 4 days',
-          suggestedTime: '2025-08-01T19:00:00',
+          subject: "Review upcoming assignments",
+          reason: "You have assignments due soon",
+          suggestedTime: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString(),
           duration: 120,
-          priority: 'urgent'
-        },
-        {
-          subject: 'Machine Learning',
-          reason: 'Assignment due soon',
-          suggestedTime: '2025-08-02T16:00:00',
-          duration: 180,
-          priority: 'high'
+          priority: "high"
         }
       ],
-      conflictAlerts: [] as Array<{
-        item1: string;
-        item2: string;
-        time: Date;
-        severity: string;
-      }>,
+      conflictAlerts: [],
       optimizationTips: [
-        'Consider grouping similar subjects for better focus',
-        'Schedule breaks between intensive study sessions',
-        'Review material 24 hours before exams for better retention'
+        "Consider breaking large tasks into smaller chunks",
+        "Schedule breaks between intensive study sessions",
+        "Set reminders for important deadlines"
       ],
-      freeTimeSlots: [
-        {
-          date: '2025-08-01',
-          slots: [
-            { start: '14:00', end: '16:00', duration: 120 },
-            { start: '19:00', end: '21:00', duration: 120 }
-          ]
-        },
-        {
-          date: '2025-08-02',
-          slots: [
-            { start: '10:00', end: '12:00', duration: 120 },
-            { start: '15:00', end: '17:00', duration: 120 }
-          ]
-        }
-      ]
+      freeTimeSlots: []
     };
-
-    // Check for conflicts
-    thisWeekSchedule.forEach((item, index) => {
-      thisWeekSchedule.slice(index + 1).forEach(other => {
-        if (item.startTime < other.endTime && other.startTime < item.endTime) {
-          suggestions.conflictAlerts.push({
-            item1: item.title,
-            item2: other.title,
-            time: item.startTime,
-            severity: 'high'
-          });
-        }
-      });
-    });
-
-    logger.info(`Smart suggestions generated for user ${userId}`);
 
     return res.json({
       success: true,
-      message: 'Smart suggestions generated successfully',
+      message: 'AI suggestions generated successfully',
       data: suggestions
     });
+
   } catch (error) {
-    logger.error('Get smart suggestions error:', error);
+    logger.error('Error generating AI suggestions:', error);
     return res.status(500).json({
       success: false,
-      message: 'Failed to generate smart suggestions'
+      message: 'Failed to generate suggestions'
     });
   }
 };
 
-// Create AI-powered study session
-export const createStudySession = async (req: Request, res: Response) => {
+// Get analytics
+export const getScheduleAnalytics = async (req: AuthenticatedRequest, res: Response) => {
   try {
-    const userId = (req as any).user?.id;
-    const { subject, topic, duration, goals } = req.body;
-
+    const userId = req.user?.id;
+    
     if (!userId) {
       return res.status(401).json({
         success: false,
@@ -525,129 +434,55 @@ export const createStudySession = async (req: Request, res: Response) => {
       });
     }
 
-    if (!subject || !topic || !duration) {
-      return res.status(400).json({
-        success: false,
-        message: 'Subject, topic, and duration are required'
-      });
-    }
-
-    // Find optimal time slot for study session
-    const now = new Date();
-    const tomorrow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    const scheduleItems = await Schedule.find({ createdBy: userId });
     
-    // Simple algorithm to find free time slot
-    let suggestedTime = new Date(now.getTime() + 60 * 60 * 1000); // Start from 1 hour later
+    // Calculate basic analytics
+    const totalScheduledHours = scheduleItems.reduce((total, item) => {
+      const duration = (item.endTime.getTime() - item.startTime.getTime()) / (1000 * 60 * 60);
+      return total + duration;
+    }, 0);
 
-    const newSession: StudySession = {
-      id: `study_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      subject,
-      topic,
-      duration,
-      scheduledTime: suggestedTime,
-      goals: goals || [],
-      completed: false,
-      productivity: 0, // Will be set after completion
-      studentId: userId
-    };
-
-    studySessions.push(newSession);
-
-    // Also create a schedule item for the study session
-    const scheduleItem: ScheduleItem = {
-      id: `sch_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      title: `Study Session: ${subject}`,
-      description: `Topic: ${topic}`,
-      type: 'study-session',
-      startTime: suggestedTime,
-      endTime: new Date(suggestedTime.getTime() + duration * 60 * 1000),
-      priority: 'medium',
-      status: 'scheduled',
-      isRecurring: false,
-      reminders: [{ time: 15, sent: false }],
-      color: '#10B981',
-      createdBy: userId,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    };
-
-    schedules.push(scheduleItem);
-
-    logger.info(`Study session created: ${newSession.id} by user ${userId}`);
-
-    return res.status(201).json({
-      success: true,
-      message: 'Study session created successfully',
-      data: {
-        session: newSession,
-        scheduleItem: scheduleItem
-      }
-    });
-  } catch (error) {
-    logger.error('Create study session error:', error);
-    return res.status(500).json({
-      success: false,
-      message: 'Failed to create study session'
-    });
-  }
-};
-
-// Get schedule analytics
-export const getScheduleAnalytics = async (req: Request, res: Response) => {
-  try {
-    const userId = (req as any).user?.id;
-
-    if (!userId) {
-      return res.status(401).json({
-        success: false,
-        message: 'User not authenticated'
-      });
-    }
-
-    const now = new Date();
-    const weekStart = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const completedTasks = scheduleItems.filter(item => item.status === 'completed').length;
+    const missedTasks = scheduleItems.filter(item => item.status === 'missed').length;
     
-    // FIXED: Get user-specific schedule for analytics
-    const userSchedule = schedules.filter(item => item.createdBy === userId);
-    const weeklySchedule = userSchedule.filter(item => 
-      item.startTime >= weekStart && item.startTime <= now
-    );
+    const typeDistribution: { [key: string]: number } = {};
+    scheduleItems.forEach(item => {
+      typeDistribution[item.type] = (typeDistribution[item.type] || 0) + 1;
+    });
 
     const analytics = {
-      totalScheduledHours: weeklySchedule.reduce((total, item) => {
-        const duration = (item.endTime.getTime() - item.startTime.getTime()) / (1000 * 60 * 60);
-        return total + duration;
-      }, 0),
-      completedTasks: weeklySchedule.filter(item => item.status === 'completed').length,
-      missedTasks: weeklySchedule.filter(item => item.status === 'missed').length,
-      productivityScore: 85, // Calculated based on completion rate
-      typeDistribution: {
-        class: weeklySchedule.filter(item => item.type === 'class').length,
-        assignment: weeklySchedule.filter(item => item.type === 'assignment').length,
-        exam: weeklySchedule.filter(item => item.type === 'exam').length,
-        'study-session': weeklySchedule.filter(item => item.type === 'study-session').length,
-        personal: weeklySchedule.filter(item => item.type === 'personal').length
-      },
-      peakHours: ['09:00', '14:00', '19:00'], // Most scheduled times
+      totalScheduledHours: Math.round(totalScheduledHours * 10) / 10,
+      completedTasks,
+      missedTasks,
+      productivityScore: completedTasks > 0 ? Math.round((completedTasks / (completedTasks + missedTasks)) * 100) : 0,
+      typeDistribution,
+      peakHours: ["9:00 AM", "2:00 PM"],
       recommendations: [
-        'Consider scheduling study sessions during your peak hours',
-        'Add buffer time between back-to-back classes',
-        'Review your weekly goals every Sunday'
+        "Schedule more study sessions during your peak hours",
+        "Set up more reminders for important deadlines",
+        "Consider time blocking for better focus"
       ]
     };
 
-    logger.info(`Schedule analytics retrieved for user ${userId}`);
-
     return res.json({
       success: true,
-      message: 'Schedule analytics retrieved successfully',
+      message: 'Analytics retrieved successfully',
       data: analytics
     });
+
   } catch (error) {
-    logger.error('Get schedule analytics error:', error);
+    logger.error('Error getting schedule analytics:', error);
     return res.status(500).json({
       success: false,
-      message: 'Failed to retrieve schedule analytics'
+      message: 'Failed to retrieve analytics'
     });
   }
+};
+
+// Helper function for backward compatibility (used by email service)
+export const initializeUserSchedule = (userId: string) => {
+  // This function is kept for backward compatibility but doesn't do anything
+  // since we now use database storage
+  console.log('📅 User schedule initialization called for:', userId);
+  return [];
 };

@@ -133,18 +133,18 @@ class ScheduleEmailService {
     }
   }
 
-  // Get user's schedule items (implement based on your data structure)
+  // Get user's schedule items from database
   private async getUserScheduleItems(userId: string): Promise<ScheduleItem[]> {
     try {
-      // Import the schedules array from controller
-      const { schedules } = await import('../controllers/scheduleController');
+      // Import the Schedule model
+      const Schedule = (await import('../models/Schedule')).default;
       
-      // Filter by user ID to get individual schedules
-      const userSchedule = schedules.filter(item => item.createdBy === userId);
+      // Get schedule items from database
+      const userSchedule = await Schedule.find({ createdBy: userId });
       
       // Convert to the format expected by email service
       return userSchedule.map(item => ({
-        _id: item.id,
+        _id: (item._id as any).toString(),
         title: item.title,
         type: item.type,
         course: item.course,

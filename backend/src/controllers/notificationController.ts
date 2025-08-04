@@ -1,22 +1,13 @@
 import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 import { logger } from '../utils/logger';
 import { emailService } from '../services/emailService';
 import { scheduleEmailService } from '../services/scheduleEmailService';
 import { User } from '../models/User';
+import Notification, { INotification, INotificationModel } from '../models/Notification';
 
-// Database to store notification preferences and sent notifications
-interface NotificationRecord {
-  id: string;
-  userId: string;
-  type: 'deadline_alert' | 'assignment_reminder' | 'exam_reminder';
-  scheduleItemId: string;
-  sentAt: Date;
-  method: 'email' | 'push' | 'sms';
-  status: 'sent' | 'failed' | 'pending';
-}
-
-// In-memory storage for demo (in production, use MongoDB)
-const sentNotifications: NotificationRecord[] = [];
+// Notification preferences and management using MongoDB
+// All notifications are now persisted in the database
 
 // Send deadline alerts via email
 export const sendDeadlineAlerts = async (req: Request, res: Response) => {
@@ -74,18 +65,25 @@ export const sendDeadlineAlerts = async (req: Request, res: Response) => {
     );
 
     if (emailSent) {
-      // Record sent notifications
-      alerts.forEach((alert: any) => {
-        sentNotifications.push({
-          id: `notif_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          userId,
+      // Record sent notifications in database
+      const notificationPromises = alerts.map((alert: any) => {
+        return Notification.createNotification({
+          userId: user._id as mongoose.Types.ObjectId,
           type: getNotificationType(alert.type),
+          title: `Deadline Alert: ${alert.title}`,
+          message: `Your ${alert.type} "${alert.title}" is due soon`,
           scheduleItemId: alert.id,
-          sentAt: new Date(),
           method: 'email',
-          status: 'sent'
+          status: 'sent',
+          sentAt: new Date(),
+          metadata: {
+            emailAddress: user.email,
+            urgencyLevel: alert.urgencyLevel || 'medium'
+          }
         });
       });
+
+      await Promise.all(notificationPromises);
 
       logger.info(`Deadline alert email sent to user ${userId} (${user.email})`);
 
@@ -213,13 +211,13 @@ export const getNotificationHistory = async (req: Request, res: Response) => {
       });
     }
 
-    const userNotifications = sentNotifications.filter(notif => notif.userId === userId);
+    const userNotifications = await Notification.getUserNotifications(userId, 50);
     
     return res.json({
       success: true,
       message: 'Notification history retrieved successfully',
       data: {
-        notifications: userNotifications.sort((a, b) => b.sentAt.getTime() - a.sentAt.getTime()),
+        notifications: userNotifications,
         total: userNotifications.length
       }
     });
@@ -313,6 +311,70 @@ export const triggerAutomaticEmailCheck = async (req: Request, res: Response) =>
     return res.status(500).json({
       success: false,
       message: 'Failed to trigger automatic email check'
+    });
+  }
+};
+
+// Get unread notifications count
+export const getUnreadCount = async (req: Request, res: Response) => {
+  try {
+    const userId = (req as any).user?.id;
+
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: 'User not authenticated'
+      });
+    }
+
+    const unreadCount = await Notification.getUnreadCount(userId);
+
+    return res.json({
+      success: true,
+      data: {
+        unreadCount
+      }
+    });
+  } catch (error) {
+    logger.error('Get unread count error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to get unread count'
+    });
+  }
+};
+
+// Mark notifications as read
+export const markAsRead = async (req: Request, res: Response) => {
+  try {
+    const userId = (req as any).user?.id;
+    const { notificationIds } = req.body;
+
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: 'User not authenticated'
+      });
+    }
+
+    if (!notificationIds || !Array.isArray(notificationIds)) {
+      return res.status(400).json({
+        success: false,
+        message: 'Notification IDs are required'
+      });
+    }
+
+    await Notification.markAsRead(userId, notificationIds);
+
+    return res.json({
+      success: true,
+      message: 'Notifications marked as read'
+    });
+  } catch (error) {
+    logger.error('Mark as read error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to mark notifications as read'
     });
   }
 };

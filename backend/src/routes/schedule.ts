@@ -5,8 +5,8 @@ import {
   createScheduleItem,
   updateScheduleItem,
   deleteScheduleItem,
-  getSmartSuggestions,
-  createStudySession,
+  getUpcomingDeadlines,
+  getAISuggestions,
   getScheduleAnalytics
 } from '../controllers/scheduleController';
 
@@ -27,11 +27,11 @@ router.put('/items/:itemId', updateScheduleItem);
 // Delete schedule item
 router.delete('/items/:itemId', deleteScheduleItem);
 
-// Get smart suggestions
-router.get('/suggestions', getSmartSuggestions);
+// Get upcoming deadlines
+router.get('/deadlines', getUpcomingDeadlines);
 
-// Create AI-powered study session
-router.post('/study-sessions', createStudySession);
+// Get AI suggestions
+router.get('/suggestions', getAISuggestions);
 
 // Get schedule analytics
 router.get('/analytics', getScheduleAnalytics);

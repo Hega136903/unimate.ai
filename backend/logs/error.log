@@ -365,3 +365,6 @@
 [31m    [7m [0m [96m  ~~~[0m[39m
 [31m    '_id' is declared here.[39m
 [31m[39m
+2025-08-04 14:11:06:116 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-04 14:15:50:1550 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-04 14:16:25:1625 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m

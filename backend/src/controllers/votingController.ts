@@ -48,18 +48,21 @@ export const getActivePolls = async (req: Request, res: Response) => {
 
     // Fetch active polls from database
     const now = new Date();
+    const futureLimit = new Date(now.getTime() + (24 * 60 * 60 * 1000)); // 24 hours from now
+    
     console.log('🔍 Fetching polls with criteria:', {
       isActive: true,
-      startTime: { $lte: now },
-      endTime: { $gte: now },
-      currentTime: now
+      endTime: { $gte: now }, // Poll hasn't ended yet
+      startTime: { $lte: futureLimit }, // Poll starts within 24 hours
+      currentTime: now,
+      futureLimit: futureLimit
     });
 
     const activePolls = await Poll.find({
       isActive: true,
-      startTime: { $lte: now },
-      endTime: { $gte: now }
-    }).sort({ createdAt: -1 });
+      endTime: { $gte: now }, // Poll hasn't ended
+      startTime: { $lte: futureLimit } // Poll starts within 24 hours
+    }).sort({ startTime: 1 }); // Sort by start time (earliest first)
 
     console.log('🔍 Found polls:', activePolls.length);
     if (activePolls.length > 0) {
@@ -101,6 +104,9 @@ export const getActivePolls = async (req: Request, res: Response) => {
                      now <= poll.endTime && 
                      !userHasVoted;
 
+      const pollStatus = now < poll.startTime ? 'scheduled' : 
+                        now > poll.endTime ? 'ended' : 'active';
+
       // Convert MongoDB document to plain object and add vote status
       const pollObj = poll.toObject();
       return {
@@ -108,7 +114,9 @@ export const getActivePolls = async (req: Request, res: Response) => {
         id: (poll._id as any).toString(), // Ensure we have an id field
         userHasVoted,
         canVote,
-        timeRemaining: poll.endTime.getTime() - now.getTime()
+        pollStatus,
+        timeRemaining: poll.endTime.getTime() - now.getTime(),
+        timeUntilStart: poll.startTime.getTime() - now.getTime()
       };
     }));
 

@@ -1714,3 +1714,36 @@
 2025-08-04 13:47:06:476 [32minfo[39m: [32m🌍 Environment: development[39m
 2025-08-04 13:47:07:477 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
 2025-08-04 13:47:07:477 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-04 14:00:00:00 [32minfo[39m: [32m🔄 Starting automatic deadline email check for all users...[39m
+2025-08-04 14:00:00:00 [32minfo[39m: [32m📧 Checking deadlines for 4 users...[39m
+2025-08-04 14:00:00:00 [32minfo[39m: [32m✅ Automatic deadline check complete. Emails sent: 0/4 users[39m
+2025-08-04 14:11:06:116 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-04 14:11:06:116 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-04 14:11:06:116 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-04 14:11:06:116 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-04 14:11:06:116 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-04 14:11:06:116 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-04 14:11:07:117 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-04 14:11:07:117 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-04 14:12:04:124 [32minfo[39m: [32mUser logged out: admin@rajalakshmi.edu.in[39m
+2025-08-04 14:12:11:1211 [32minfo[39m: [32mUser logged in: hegavasanth@gmail.com[39m
+2025-08-04 14:12:13:1213 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 0 polls[39m
+2025-08-04 14:12:14:1214 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 0 polls[39m
+2025-08-04 14:12:17:1217 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 0 polls[39m
+2025-08-04 14:12:18:1218 [32minfo[39m: [32mActive polls retrieved for user 688e6079d18e5565c99ec847: 0 polls[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-04 14:15:50:1550 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-02.jdhu8rq.mongodb.net[39m
+2025-08-04 14:15:50:1550 [32minfo[39m: [32m📊 Database: unimate-ai[39m
+2025-08-04 14:16:25:1625 [32minfo[39m: [32m📅 Automatic email scheduler started:[39m
+2025-08-04 14:16:25:1625 [32minfo[39m: [32m   • Hourly checks: Every hour at :00[39m
+2025-08-04 14:16:25:1625 [32minfo[39m: [32m   • Daily summary: Every day at 8:00 AM[39m
+2025-08-04 14:16:25:1625 [32minfo[39m: [32m📧 Email config check: User=221501044@rajalakshmi.edu.in, Password=[SET], Service=gmail[39m
+2025-08-04 14:16:25:1625 [32minfo[39m: [32mEmail service initialized successfully[39m
+2025-08-04 14:16:25:1625 [31merror[39m: [31mUncaught Exception: listen EADDRINUSE: address already in use :::5000[39m
+2025-08-04 14:16:26:1626 [32minfo[39m: [32m🍃 MongoDB Connected: ac-7ye0vcw-shard-00-00.jdhu8rq.mongodb.net[39m
+2025-08-04 14:16:26:1626 [32minfo[39m: [32m📊 Database: unimate-ai[39m

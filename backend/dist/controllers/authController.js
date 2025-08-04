@@ -8,6 +8,7 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const express_validator_1 = require("express-validator");
 const User_1 = require("../models/User");
 const logger_1 = require("../utils/logger");
+const scheduleController_1 = require("./scheduleController");
 const generateToken = (userId) => {
     const secret = process.env.JWT_SECRET;
     return jsonwebtoken_1.default.sign({ id: userId }, secret, { expiresIn: '7d' });
@@ -46,7 +47,10 @@ const register = async (req, res) => {
         const token = generateToken(user._id.toString());
         user.lastLogin = new Date();
         await user.save();
+        const userId = user._id.toString();
+        (0, scheduleController_1.initializeUserSchedule)(userId);
         logger_1.logger.info(`New user registered: ${email}`);
+        logger_1.logger.info(`Sample schedule items created for user: ${userId}`);
         res.status(201).json({
             success: true,
             message: 'User registered successfully',

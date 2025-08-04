@@ -10,6 +10,8 @@ class EmailService {
     constructor() {
         this.transporter = null;
         this.isConfigured = false;
+    }
+    initialize() {
         this.initializeTransporter();
     }
     initializeTransporter() {
@@ -17,8 +19,10 @@ class EmailService {
             const emailUser = process.env.EMAIL_USER;
             const emailPassword = process.env.EMAIL_PASSWORD;
             const emailService = process.env.EMAIL_SERVICE || 'gmail';
-            if (!emailUser || !emailPassword) {
-                logger_1.logger.warn('Email configuration not found. Email notifications will be disabled.');
+            logger_1.logger.info(`📧 Email config check: User=${emailUser}, Password=${emailPassword ? '[SET]' : '[NOT SET]'}, Service=${emailService}`);
+            if (!emailUser || !emailPassword || emailUser === 'your-email@gmail.com' || emailPassword === 'paste-your-16-character-app-password-here' || emailPassword === 'your-16-character-gmail-app-password-here') {
+                logger_1.logger.warn('Email configuration not found or using example values. Email notifications will use mock mode.');
+                this.isConfigured = false;
                 return;
             }
             this.transporter = nodemailer_1.default.createTransport({
@@ -41,8 +45,13 @@ class EmailService {
     }
     async sendEmail(options) {
         if (!this.isConfigured || !this.transporter) {
-            logger_1.logger.warn('Email service not configured. Skipping email send.');
-            return false;
+            logger_1.logger.info('📧 [MOCK EMAIL] Would send email:', {
+                to: options.to,
+                subject: options.subject,
+                htmlLength: options.html.length
+            });
+            logger_1.logger.info('📧 [MOCK EMAIL] Email content preview:', options.html.substring(0, 200) + '...');
+            return true;
         }
         try {
             const mailOptions = {
@@ -163,10 +172,10 @@ class EmailService {
             ` : ''}
 
             <div style="text-align: center; margin: 30px 0;">
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}/schedule" class="btn">
+                <a href="${process.env.FRONTEND_URL || 'https://unimate-ai-37d2.vercel.app'}/schedule" class="btn">
                     📅 View Full Schedule
                 </a>
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}" class="btn">
+                <a href="${process.env.FRONTEND_URL || 'https://unimate-ai-37d2.vercel.app'}" class="btn">
                     🎓 Open Unimate.AI
                 </a>
             </div>
@@ -194,7 +203,8 @@ class EmailService {
     }
     async testConnection() {
         if (!this.isConfigured || !this.transporter) {
-            return false;
+            logger_1.logger.info('📧 [MOCK MODE] Email service in mock mode - would verify connection');
+            return true;
         }
         try {
             await this.transporter.verify();

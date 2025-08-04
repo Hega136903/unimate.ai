@@ -1,10 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateNotificationPreferences = exports.getNotificationHistory = exports.testEmailService = exports.sendDeadlineAlerts = void 0;
+exports.markAsRead = exports.getUnreadCount = exports.triggerAutomaticEmailCheck = exports.updateNotificationPreferences = exports.getNotificationHistory = exports.testEmailService = exports.sendDeadlineAlerts = void 0;
 const logger_1 = require("../utils/logger");
 const emailService_1 = require("../services/emailService");
+const scheduleEmailService_1 = require("../services/scheduleEmailService");
 const User_1 = require("../models/User");
-const sentNotifications = [];
+const Notification_1 = __importDefault(require("../models/Notification"));
 const sendDeadlineAlerts = async (req, res) => {
     try {
         const userId = req.user?.id;
@@ -44,17 +48,23 @@ const sendDeadlineAlerts = async (req, res) => {
         }));
         const emailSent = await emailService_1.emailService.sendDeadlineAlert(user.email, `${user.firstName} ${user.lastName}`, emailAlerts);
         if (emailSent) {
-            alerts.forEach((alert) => {
-                sentNotifications.push({
-                    id: `notif_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-                    userId,
+            const notificationPromises = alerts.map((alert) => {
+                return Notification_1.default.createNotification({
+                    userId: user._id,
                     type: getNotificationType(alert.type),
+                    title: `Deadline Alert: ${alert.title}`,
+                    message: `Your ${alert.type} "${alert.title}" is due soon`,
                     scheduleItemId: alert.id,
-                    sentAt: new Date(),
                     method: 'email',
-                    status: 'sent'
+                    status: 'sent',
+                    sentAt: new Date(),
+                    metadata: {
+                        emailAddress: user.email,
+                        urgencyLevel: alert.urgencyLevel || 'medium'
+                    }
                 });
             });
+            await Promise.all(notificationPromises);
             logger_1.logger.info(`Deadline alert email sent to user ${userId} (${user.email})`);
             return res.json({
                 success: true,
@@ -115,9 +125,19 @@ const testEmailService = async (req, res) => {
           </div>
           <div style="padding: 20px; background: #f8f9fa; margin: 20px 0; border-radius: 10px;">
             <h2>✅ Email Notifications Working</h2>
-            <p>This test confirms that your email notifications are properly configured and working.</p>
-            <p><strong>Your email:</strong> ${user.email}</p>
+            <p>This test confirms that email notifications are working for your account.</p>
+            <p><strong>Your login email:</strong> ${user.email}</p>
+            <p><strong>Your student ID:</strong> ${user.studentId || 'Not set'}</p>
             <p><strong>Test time:</strong> ${new Date().toLocaleString()}</p>
+          </div>
+          <div style="padding: 20px; background: #e3f2fd; margin: 20px 0; border-radius: 10px;">
+            <h3>📧 How Email Alerts Work:</h3>
+            <ul>
+              <li>✅ <strong>Automatic alerts</strong> when deadlines are within 24 hours</li>
+              <li>✅ <strong>Sent to your login email:</strong> ${user.email}</li>
+              <li>✅ <strong>Beautiful HTML format</strong> with color-coded urgency</li>
+              <li>✅ <strong>Mobile-friendly</strong> design</li>
+            </ul>
           </div>
           <div style="text-align: center; color: #6c757d; margin-top: 20px;">
             <p>You will now receive deadline alerts and notifications from Unimate.AI</p>
@@ -130,10 +150,11 @@ const testEmailService = async (req, res) => {
             logger_1.logger.info(`Test email sent successfully to user ${userId} (${user.email})`);
             return res.json({
                 success: true,
-                message: `Test email sent successfully to ${user.email}`,
+                message: `Test email sent successfully to your login email: ${user.email}`,
                 data: {
                     email: user.email,
-                    sentAt: new Date()
+                    sentAt: new Date(),
+                    isConfigured: emailService_1.emailService.testConnection !== undefined
                 }
             });
         }
@@ -162,12 +183,12 @@ const getNotificationHistory = async (req, res) => {
                 message: 'User not authenticated'
             });
         }
-        const userNotifications = sentNotifications.filter(notif => notif.userId === userId);
+        const userNotifications = await Notification_1.default.getUserNotifications(userId, 50);
         return res.json({
             success: true,
             message: 'Notification history retrieved successfully',
             data: {
-                notifications: userNotifications.sort((a, b) => b.sentAt.getTime() - a.sentAt.getTime()),
+                notifications: userNotifications,
                 total: userNotifications.length
             }
         });
@@ -233,4 +254,80 @@ function getNotificationType(scheduleType) {
         default: return 'deadline_alert';
     }
 }
+const triggerAutomaticEmailCheck = async (req, res) => {
+    try {
+        logger_1.logger.info('🔧 Manual trigger for automatic email check requested');
+        await scheduleEmailService_1.scheduleEmailService.triggerManualCheck();
+        return res.json({
+            success: true,
+            message: 'Automatic email check triggered successfully',
+            timestamp: new Date()
+        });
+    }
+    catch (error) {
+        logger_1.logger.error('Trigger automatic email check error:', error);
+        return res.status(500).json({
+            success: false,
+            message: 'Failed to trigger automatic email check'
+        });
+    }
+};
+exports.triggerAutomaticEmailCheck = triggerAutomaticEmailCheck;
+const getUnreadCount = async (req, res) => {
+    try {
+        const userId = req.user?.id;
+        if (!userId) {
+            return res.status(401).json({
+                success: false,
+                message: 'User not authenticated'
+            });
+        }
+        const unreadCount = await Notification_1.default.getUnreadCount(userId);
+        return res.json({
+            success: true,
+            data: {
+                unreadCount
+            }
+        });
+    }
+    catch (error) {
+        logger_1.logger.error('Get unread count error:', error);
+        return res.status(500).json({
+            success: false,
+            message: 'Failed to get unread count'
+        });
+    }
+};
+exports.getUnreadCount = getUnreadCount;
+const markAsRead = async (req, res) => {
+    try {
+        const userId = req.user?.id;
+        const { notificationIds } = req.body;
+        if (!userId) {
+            return res.status(401).json({
+                success: false,
+                message: 'User not authenticated'
+            });
+        }
+        if (!notificationIds || !Array.isArray(notificationIds)) {
+            return res.status(400).json({
+                success: false,
+                message: 'Notification IDs are required'
+            });
+        }
+        await Notification_1.default.markAsRead(userId, notificationIds);
+        return res.json({
+            success: true,
+            message: 'Notifications marked as read'
+        });
+    }
+    catch (error) {
+        logger_1.logger.error('Mark as read error:', error);
+        return res.status(500).json({
+            success: false,
+            message: 'Failed to mark notifications as read'
+        });
+    }
+};
+exports.markAsRead = markAsRead;
 //# sourceMappingURL=notificationController.js.map

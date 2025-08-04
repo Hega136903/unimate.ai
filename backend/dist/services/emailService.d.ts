@@ -16,6 +16,7 @@ declare class EmailService {
     private transporter;
     private isConfigured;
     constructor();
+    initialize(): void;
     private initializeTransporter;
     sendEmail(options: EmailOptions): Promise<boolean>;
     sendDeadlineAlert(userEmail: string, userName: string, alerts: DeadlineAlert[]): Promise<boolean>;

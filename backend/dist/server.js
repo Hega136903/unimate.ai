@@ -23,7 +23,15 @@ const portfolio_1 = __importDefault(require("./routes/portfolio"));
 const admin_1 = __importDefault(require("./routes/admin"));
 const seed_1 = __importDefault(require("./routes/seed"));
 const notifications_1 = __importDefault(require("./routes/notifications"));
-dotenv_1.default.config();
+console.log('🔍 Current working directory:', process.cwd());
+console.log('🔍 Looking for .env file at:', require('path').resolve('.env'));
+const result = dotenv_1.default.config({ path: '.env' });
+console.log('🔍 dotenv result:', result);
+console.log('🔍 EMAIL_USER:', process.env.EMAIL_USER);
+console.log('🔍 EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD ? '[SET]' : '[NOT SET]');
+const emailService_1 = require("./services/emailService");
+emailService_1.emailService.initialize();
+require("./services/scheduleEmailService");
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 5000;
 (0, database_1.connectDB)();
@@ -36,7 +44,7 @@ app.use((0, helmet_1.default)());
 app.use((0, compression_1.default)());
 app.use(limiter);
 app.use((0, cors_1.default)({
-    origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'http://localhost:3003'],
+    origin: process.env.CORS_ORIGIN?.split(',') || ['https://unimate-ai-37d2.vercel.app'],
     credentials: true,
 }));
 app.use(express_1.default.json({ limit: '10mb' }));
@@ -87,7 +95,7 @@ app.use('*', (req, res) => {
 });
 app.listen(PORT, () => {
     logger_1.logger.info(`🚀 Unimate.AI Backend server running on port ${PORT}`);
-    logger_1.logger.info(`📊 Health check: http://localhost:${PORT}/api/health`);
+    logger_1.logger.info(`📊 Health check: https://unimate-ai.onrender.com/api/health`);
     logger_1.logger.info(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 exports.default = app;

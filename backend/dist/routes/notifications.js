@@ -12,5 +12,8 @@ router.post('/deadline-alerts', notificationController_1.sendDeadlineAlerts);
 router.post('/test-email', notificationController_1.testEmailService);
 router.get('/history', notificationController_1.getNotificationHistory);
 router.put('/preferences', notificationController_1.updateNotificationPreferences);
+router.post('/trigger-automatic-check', notificationController_1.triggerAutomaticEmailCheck);
+router.get('/unread-count', notificationController_1.getUnreadCount);
+router.put('/mark-read', notificationController_1.markAsRead);
 exports.default = router;
 //# sourceMappingURL=notifications.js.map

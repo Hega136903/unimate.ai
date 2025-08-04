@@ -9,8 +9,8 @@ router.get('/', scheduleController_1.getStudentSchedule);
 router.post('/items', scheduleController_1.createScheduleItem);
 router.put('/items/:itemId', scheduleController_1.updateScheduleItem);
 router.delete('/items/:itemId', scheduleController_1.deleteScheduleItem);
-router.get('/suggestions', scheduleController_1.getSmartSuggestions);
-router.post('/study-sessions', scheduleController_1.createStudySession);
+router.get('/deadlines', scheduleController_1.getUpcomingDeadlines);
+router.get('/suggestions', scheduleController_1.getAISuggestions);
 router.get('/analytics', scheduleController_1.getScheduleAnalytics);
 exports.default = router;
 //# sourceMappingURL=schedule.js.map

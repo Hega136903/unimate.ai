@@ -185,7 +185,7 @@ router.post('/polls', [
             options: pollOptions,
             startTime: start,
             endTime: end,
-            isActive: start <= now && end > now,
+            isActive: true,
             isAnonymous,
             category,
             createdBy: req.user.id,

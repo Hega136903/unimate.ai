@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { API_BASE_URL } from '../lib/api';
+import OTPVerificationModal from './OTPVerificationModal';
 
 interface PollOption {
   id: string;
@@ -55,6 +56,8 @@ const VotingSystem: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [voting, setVoting] = useState(false);
   const [notification, setNotification] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null);
+  const [isOtpModalOpen, setIsOtpModalOpen] = useState(false);
+  const [pendingVote, setPendingVote] = useState<{ pollId: string; optionId: string } | null>(null);
 
   // Helper function to get auth token
   const getAuthToken = () => {
@@ -141,13 +144,29 @@ const VotingSystem: React.FC = () => {
         setSelectedPoll(null);
         setSelectedOption('');
       } else {
-        throw new Error(data.message || 'Failed to cast vote');
+        // Check if OTP is required
+        if (data.requiresOTP) {
+          setPendingVote({ pollId, optionId });
+          setIsOtpModalOpen(true);
+          showNotification('Please verify your identity with OTP to cast your vote.', 'info');
+        } else {
+          throw new Error(data.message || 'Failed to cast vote');
+        }
       }
     } catch (error) {
       console.error('🗳️ Error casting vote:', error);
       showNotification(`Error casting vote: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
     } finally {
       setVoting(false);
+    }
+  };
+
+  const handleOtpSuccess = async () => {
+    setIsOtpModalOpen(false);
+    if (pendingVote) {
+      showNotification('OTP verified successfully! Casting your vote...', 'success');
+      await castVote(pendingVote.pollId, pendingVote.optionId);
+      setPendingVote(null);
     }
   };
 
@@ -461,7 +480,73 @@ const VotingSystem: React.FC = () => {
             </div>
           </div>
         )}
+
+        {/* OTP Verification Modal */}
+        {isOtpModalOpen && pendingVote && (
+          <OTPVerificationModal
+            isOpen={isOtpModalOpen}
+            onClose={() => setIsOtpModalOpen(false)}
+            onVerify={async (otpCode) => {
+              setVoting(true);
+              try {
+                const token = getAuthToken();
+                if (!token) return;
+
+                console.log('🔑 Verifying OTP:', otpCode);
+                
+                const response = await fetch(`${API_BASE_URL}/voting/verify-otp`, {
+                  method: 'POST',
+                  headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ 
+                    pollId: pendingVote.pollId, 
+                    optionId: pendingVote.optionId, 
+                    otpCode 
+                  }),
+                });
+
+                console.log('🔑 OTP verification response status:', response.status);
+                
+                if (!response.ok) {
+                  const errorData = await response.json();
+                  throw new Error(errorData.message || `OTP verification error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('🔑 OTP verification response data:', data);
+                
+                if (data.success) {
+                  showNotification('Vote cast successfully! 🎉', 'success');
+                  // Refresh polls to update vote status
+                  await fetchActivePolls();
+                  // Fetch results for this poll
+                  await fetchPollResults(pendingVote.pollId);
+                  setPendingVote(null);
+                } else {
+                  throw new Error(data.message || 'Failed to verify OTP');
+                }
+              } catch (error) {
+                console.error('🔑 Error verifying OTP:', error);
+                showNotification(`Error verifying OTP: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
+              } finally {
+                setVoting(false);
+              }
+            }}
+          />
+        )}
       </div>
+
+      {isOtpModalOpen && (
+        <OTPVerificationModal
+          isOpen={isOtpModalOpen}
+          onClose={() => setIsOtpModalOpen(false)}
+          onSuccess={handleOtpSuccess}
+          email={user?.email || ''}
+          context="vote"
+        />
+      )}
     </div>
   );
 };

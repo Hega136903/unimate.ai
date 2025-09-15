@@ -163,8 +163,44 @@ const VotingSystem: React.FC = () => {
     setIsOtpModalOpen(false);
     if (pendingVote) {
       showNotification('OTP verified successfully! Casting your vote...', 'success');
-      await castVote(pendingVote.pollId, pendingVote.optionId);
-      setPendingVote(null);
+      // Now cast the vote - the backend should allow it since OTP is verified
+      setVoting(true);
+      try {
+        const token = getAuthToken();
+        if (!token) return;
+
+        const response = await fetch(`${API_BASE_URL}/voting/vote`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ 
+            pollId: pendingVote.pollId, 
+            optionId: pendingVote.optionId 
+          }),
+        });
+
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          showNotification(`Vote cast successfully for "${data.data.selectedOption}"!`, 'success');
+          // Refresh polls to update vote status
+          await fetchActivePolls();
+          // Fetch results for this poll
+          await fetchPollResults(pendingVote.pollId);
+          setSelectedPoll(null);
+          setSelectedOption('');
+        } else {
+          throw new Error(data.message || 'Failed to cast vote after OTP verification');
+        }
+      } catch (error) {
+        console.error('🗳️ Error casting vote after OTP:', error);
+        showNotification(`Error casting vote: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
+      } finally {
+        setVoting(false);
+        setPendingVote(null);
+      }
     }
   };
 
@@ -483,68 +519,15 @@ const VotingSystem: React.FC = () => {
         {isOtpModalOpen && pendingVote && (
           <OTPVerificationModal
             isOpen={isOtpModalOpen}
-            onClose={() => setIsOtpModalOpen(false)}
-            onVerify={async (otpCode) => {
-              setVoting(true);
-              try {
-                const token = getAuthToken();
-                if (!token) return;
-
-                console.log('🔑 Verifying OTP:', otpCode);
-                
-                const response = await fetch(`${API_BASE_URL}/voting/verify-otp`, {
-                  method: 'POST',
-                  headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({ 
-                    pollId: pendingVote.pollId, 
-                    optionId: pendingVote.optionId, 
-                    otpCode 
-                  }),
-                });
-
-                console.log('🔑 OTP verification response status:', response.status);
-                
-                if (!response.ok) {
-                  const errorData = await response.json();
-                  throw new Error(errorData.message || `OTP verification error: ${response.status}`);
-                }
-
-                const data = await response.json();
-                console.log('🔑 OTP verification response data:', data);
-                
-                if (data.success) {
-                  showNotification('Vote cast successfully! 🎉', 'success');
-                  // Refresh polls to update vote status
-                  await fetchActivePolls();
-                  // Fetch results for this poll
-                  await fetchPollResults(pendingVote.pollId);
-                  setPendingVote(null);
-                } else {
-                  throw new Error(data.message || 'Failed to verify OTP');
-                }
-              } catch (error) {
-                console.error('🔑 Error verifying OTP:', error);
-                showNotification(`Error verifying OTP: ${error instanceof Error ? error.message : 'Unknown error'}`, 'error');
-              } finally {
-                setVoting(false);
-              }
+            onClose={() => {
+              setIsOtpModalOpen(false);
+              setPendingVote(null);
             }}
+            onVerified={handleOtpSuccess}
+            userEmail={user?.email}
           />
         )}
       </div>
-
-      {isOtpModalOpen && (
-        <OTPVerificationModal
-          isOpen={isOtpModalOpen}
-          onClose={() => setIsOtpModalOpen(false)}
-          onSuccess={handleOtpSuccess}
-          email={user?.email || ''}
-          context="vote"
-        />
-      )}
     </div>
   );
 };

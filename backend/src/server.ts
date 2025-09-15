@@ -20,6 +20,7 @@ import portfolioRoutes from './routes/portfolio';
 import adminRoutes from './routes/admin';
 import seedRoutes from './routes/seed';
 import notificationRoutes from './routes/notifications';
+import otpRoutes from './routes/otp';
 
 // Import and initialize email service AFTER environment variables are loaded
 import { emailService } from './services/emailService';
@@ -28,10 +29,9 @@ emailService.initialize();
 // Import services AFTER environment variables are loaded
 import './services/scheduleEmailService'; // Start automatic email scheduler
 import './services/scheduleCleanupService'; // Start schedule cleanup (deletes old items)
-import { keepAliveService } from './services/keepAliveService'; // Keep server awake
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001; // Changed to 5001 to avoid conflicts
 
 // Connect to database
 connectDB();
@@ -66,6 +66,7 @@ app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/seed', seedRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/otp', otpRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -113,9 +114,6 @@ app.listen(PORT, () => {
   logger.info(`🚀 Unimate.AI Backend server running on port ${PORT}`);
   logger.info(`📊 Health check: https://unimate-ai.onrender.com/api/health`);
   logger.info(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-  
-  // Start keep-alive service
-  keepAliveService.start();
 });
 
 export default app;

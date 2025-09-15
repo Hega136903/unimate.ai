@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { logger } from '../utils/logger';
 import Poll, { IPoll } from '../models/Poll';
 import Vote, { IVote } from '../models/Vote';
+import { otpService } from '../services/otpService';
 
 // Database cleanup function
 export const cleanupInvalidVotes = async () => {
@@ -250,6 +251,16 @@ export const castVote = async (req: Request, res: Response) => {
       });
     }
 
+    // 🔐 NEW: Check if user is authorized to vote (OTP verified)
+    const isAuthorized = await otpService.isUserAuthorizedToVote(userId);
+    if (!isAuthorized) {
+      return res.status(403).json({
+        success: false,
+        message: 'OTP verification required. Please verify your identity before voting.',
+        requiresOTP: true
+      });
+    }
+
     // Check if option exists
     const option = poll.options.find(opt => opt.id === optionId);
     if (!option) {
@@ -277,6 +288,10 @@ export const castVote = async (req: Request, res: Response) => {
     try {
       await newVote.save();
       console.log('✅ Vote saved successfully');
+      
+      // 🔐 Clear voting authorization after successful vote
+      await otpService.clearVotingAuthorization(userId);
+      
     } catch (saveError: any) {
       console.error('❌ Vote save error:', saveError);
       

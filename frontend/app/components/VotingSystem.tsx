@@ -126,14 +126,19 @@ const VotingSystem: React.FC = () => {
       });
 
       console.log('🗳️ Vote response status:', response.status);
-      
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || `Vote API error: ${response.status}`);
-      }
 
       const data = await response.json();
       console.log('🗳️ Vote response data:', data);
+      
+      if (!response.ok) {
+        if (data.requiresOTP) {
+          setPendingVote({ pollId, optionId });
+          setIsOtpModalOpen(true);
+          showNotification('Please verify your identity with OTP to cast your vote.', 'info');
+          return; 
+        }
+        throw new Error(data.message || `Vote API error: ${response.status}`);
+      }
       
       if (data.success) {
         showNotification(`Vote cast successfully for "${data.data.selectedOption}"!`, 'success');
@@ -144,14 +149,7 @@ const VotingSystem: React.FC = () => {
         setSelectedPoll(null);
         setSelectedOption('');
       } else {
-        // Check if OTP is required
-        if (data.requiresOTP) {
-          setPendingVote({ pollId, optionId });
-          setIsOtpModalOpen(true);
-          showNotification('Please verify your identity with OTP to cast your vote.', 'info');
-        } else {
-          throw new Error(data.message || 'Failed to cast vote');
-        }
+        throw new Error(data.message || 'Failed to cast vote');
       }
     } catch (error) {
       console.error('🗳️ Error casting vote:', error);

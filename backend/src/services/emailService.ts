@@ -32,21 +32,24 @@ class EmailService {
 
   private initializeTransporter() {
     try {
-      // Check if email configuration is available
       const emailUser = process.env.EMAIL_USER;
       const emailPassword = process.env.EMAIL_PASSWORD;
       const emailService = process.env.EMAIL_SERVICE || 'gmail';
+      const mockEmail = process.env.EMAIL_MOCK === 'true';
 
-      logger.info(`📧 Email config check: User=${emailUser}, Password=${emailPassword ? '[SET]' : '[NOT SET]'}, Service=${emailService}`);
+      logger.info(`📧 Email config check: User=${emailUser}, Password=${emailPassword ? '[SET]' : '[NOT SET]'}, Service=${emailService}, Mock=${mockEmail}`);
 
-      if (!emailUser || !emailPassword || emailUser === 'your-email@gmail.com' || emailPassword === 'paste-your-16-character-app-password-here' || emailPassword === 'your-16-character-gmail-app-password-here') {
-        logger.warn('Email configuration not found or using example values. Email notifications will use mock mode.');
-        this.isConfigured = false; // Set to false for mock mode
+      if (mockEmail || !emailUser || !emailPassword || emailUser.includes('your-email')) {
+        logger.warn('Email service is in mock mode. No real emails will be sent.');
+        this.isConfigured = false;
         return;
       }
-
+      
       this.transporter = nodemailer.createTransport({
         service: emailService,
+        host: emailService === 'gmail' ? 'smtp.gmail.com' : undefined,
+        port: 587,
+        secure: false,
         auth: {
           user: emailUser,
           pass: emailPassword,
@@ -57,22 +60,52 @@ class EmailService {
       });
 
       this.isConfigured = true;
-      logger.info('Email service initialized successfully');
-    } catch (error) {
-      logger.error('Failed to initialize email service:', error);
+      logger.info('Email service initialized for real emails.');
+      
+      this.verifyConnection().catch(error => {
+        logger.error('Email transporter verification failed on startup:', error);
+        this.isConfigured = false;
+      });
+      
+    } catch (error: any) {
+      logger.error('Failed to initialize email service:', error.message);
       this.isConfigured = false;
+    }
+  }
+
+  async verifyConnection(): Promise<boolean> {
+    if (!this.transporter) {
+      logger.warn('Verification skipped: Transporter not configured.');
+      return false;
+    }
+    try {
+      await this.transporter.verify();
+      logger.info('✅ Email transporter connection verified successfully.');
+      return true;
+    } catch (error: any) {
+      logger.error('❌ Email transporter verification failed:', error.message);
+      return false;
     }
   }
 
   async sendEmail(options: EmailOptions): Promise<boolean> {
     if (!this.isConfigured || !this.transporter) {
-      // Mock mode - log email instead of sending
+      // Enhanced mock mode - extract and display OTP clearly
+      const otpMatch = options.html.match(/(\d{6})/);
+      const otp = otpMatch ? otpMatch[1] : 'Not found';
+      
       logger.info('📧 [MOCK EMAIL] Would send email:', {
         to: options.to,
         subject: options.subject,
         htmlLength: options.html.length
       });
-      logger.info('📧 [MOCK EMAIL] Email content preview:', options.html.substring(0, 200) + '...');
+      
+      console.log('\n� =================== OTP CODE ===================');
+      console.log(`📧 TO: ${options.to}`);
+      console.log(`🗳️ SUBJECT: ${options.subject}`);
+      console.log(`🔢 OTP CODE: ${otp}`);
+      console.log('🔐 =============================================\n');
+      
       return true; // Return true for mock success
     }
 

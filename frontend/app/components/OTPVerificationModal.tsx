@@ -106,6 +106,8 @@ const OTPVerificationModal: React.FC<OTPVerificationModalProps> = ({
     setError(null);
 
     try {
+      console.log('🔑 Verifying OTP:', otp);
+      
       const response = await fetch(`${API_BASE_URL}/otp/verify-otp`, {
         method: 'POST',
         headers: {
@@ -115,17 +117,22 @@ const OTPVerificationModal: React.FC<OTPVerificationModalProps> = ({
         body: JSON.stringify({ otp }),
       });
 
+      console.log('🔑 OTP verification response status:', response.status);
+      
       const data: OTPResponse = await response.json();
+      console.log('🔑 OTP verification response data:', data);
 
       if (data.success && data.data?.votingAuthorized) {
+        console.log('✅ OTP verification successful!');
         onVerified();
         handleClose();
       } else {
         setAttempts(prev => prev + 1);
-        setError(data.message);
+        setError(data.message || 'Failed to verify OTP');
         setOtp('');
       }
     } catch (err) {
+      console.error('🔑 OTP verification error:', err);
       setError('Failed to verify OTP. Please try again.');
     } finally {
       setLoading(false);

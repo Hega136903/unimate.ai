@@ -16,6 +16,20 @@ export interface IUser extends Document {
   lastLogin?: Date;
   interests?: string[];
   learningStyle?: 'visual' | 'auditory' | 'kinesthetic' | 'reading/writing';
+  phoneNumber?: string;
+  otp: {
+    code?: string;
+    type?: 'email' | 'sms';
+    expiresAt?: Date;
+    verified?: boolean;
+    verifiedAt?: Date;
+    attempts?: number;
+  };
+  votingVerification: {
+    isVerifiedForVoting?: boolean;
+    verificationExpiresAt?: Date;
+    lastVotingOtpAt?: Date;
+  };
   preferences: {
     notifications: boolean;
     darkMode: boolean;
@@ -122,6 +136,52 @@ const UserSchema = new Schema<IUser>(
       enum: ['visual', 'auditory', 'kinesthetic', 'reading/writing'],
       default: 'visual',
     },
+    phoneNumber: {
+      type: String,
+      trim: true,
+      validate: {
+        validator: function(v: string) {
+          return !v || /^\+?[\d\s\-\(\)]+$/.test(v);
+        },
+        message: 'Please provide a valid phone number'
+      }
+    },
+    otp: {
+      code: {
+        type: String,
+        select: false, // Don't include in queries by default
+      },
+      type: {
+        type: String,
+        enum: ['email', 'sms'],
+      },
+      expiresAt: {
+        type: Date,
+      },
+      verified: {
+        type: Boolean,
+        default: false,
+      },
+      verifiedAt: {
+        type: Date,
+      },
+      attempts: {
+        type: Number,
+        default: 0,
+      },
+    },
+    votingVerification: {
+      isVerifiedForVoting: {
+        type: Boolean,
+        default: false,
+      },
+      verificationExpiresAt: {
+        type: Date,
+      },
+      lastVotingOtpAt: {
+        type: Date,
+      },
+    },
     studentId: {
       type: String,
       trim: true,
@@ -225,7 +285,7 @@ const UserSchema = new Schema<IUser>(
 UserSchema.index({ university: 1, studentId: 1 });
 
 // Hash password before saving
-UserSchema.pre<IUser>('save', async function (next) {
+UserSchema.pre<IUser>('save', async function (next: any) {
   if (!this.isModified('password')) return next();
 
   try {
